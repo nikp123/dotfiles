@@ -1,0 +1,26 @@
+#!/bin/bash
+result=$(echo -e "lock\nsleep\nhibernate\nlogoff\nreboot\npoweroff\nwindows" | rofi -dmenu -font "Terminus (TTF) 12" )
+case $result in
+    "poweroff")
+        poweroff
+        ;;
+    "reboot")
+        reboot
+        ;;
+    "windows")
+        systemctl reboot --boot-loader-entry=windows10
+        ;;
+    "logoff")
+        swaymsg exit
+        ;;
+    "hibernate")
+        systemctl hibernate
+        ;;
+    "sleep")
+        systemctl suspend-then-hibernate
+        ;;
+    "lock")
+        loginctl lock-session
+        ;;
+esac
+

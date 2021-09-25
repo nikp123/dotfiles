@@ -1,0 +1,4 @@
+Host aur4.archlinux.org aur.archlinux.org
+    User aur
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/id_rsa

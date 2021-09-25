@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+
+# nikp123/dotfiles
+# Copyright (C) 2021  Nikola Pavlica
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+import sys
+import os
+import shutil
+
+homepath=os.environ["HOME"]
+targetpath=sys.argv[1]
+
+# Hard-code directories, because that's what *good* devs do
+gitrepopath=homepath+"/Projects/git/setup/dotfiles"
+
+# safeguard my lazy scripts
+if not targetpath.startswith(homepath):
+    raise ValueError('Invalid $HOME specified or non-root path!!!!')
+
+home=homepath.split('/')
+target=targetpath.split('/')
+
+home.pop(0)
+target.pop(0)
+
+# Check if the lenght checks out
+if len(target) < 3:
+    raise ValueError("This probably isn't a directory you want")
+
+# Matches the sub-lists
+if target[:len(home)] != home:
+    raise ValueError('Mis-matching $HOME dir. VERY SUS!')
+
+if not target[2].startswith('.'):
+    raise ValueError('Not a dot directory :(')
+
+#if not (os.path.isdir(targetpath) or os.path.isfile(targetpath)):
+#    raise ValueError('The specified path is non-existant')
+
+# Get directory inside repo
+inside_repo = target[len(home):]
+
+# Remove dot from dotpath
+inside_repo[0] = inside_repo[0][1:]
+
+# Convert the path into a gittable one
+inside_repo_path = '/'.join([gitrepopath] + inside_repo)
+
+# Check path inside git repo
+inside_repo = inside_repo_path.split('/')
+inside_repo.pop(0)
+
+# Remove dir so that the path could be checked
+create_git = inside_repo
+create_git.pop(len(inside_repo)-1)
+create_git_path = '/' + '/'.join(create_git)
+
+if not os.path.isdir(create_git_path):
+    input("The parent path \'" + create_git_path + "\' does not exist!\n"
+            "Press any key to create path and contine or break to abort")
+    os.makedirs(create_git_path)
+
+# Start to move the directory
+shutil.move(targetpath, inside_repo_path)
+os.symlink(inside_repo_path, targetpath)
+

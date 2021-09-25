@@ -1,0 +1,60 @@
+#!/bin/sh
+set -m
+
+feh --bg-fill /home/nikp123/Pictures/Wallpaper/i_actually_use/hd/autumn_orange_forestry.jpg
+
+#wpg -m 
+
+# Policy manager
+lxpolkit &
+
+# Manages the "everything bar"
+mkfifo $I3SOCK.xob
+tail -f $I3SOCK.xob | xob &
+
+# Monitor "manager"
+#./lid-check &
+
+# Terminal emulator server? Yeah don't ask
+#foot -s &
+
+# Delay (if needed)
+#sleep 1
+
+#/usr/lib/kdeconnectd &
+#kdeconnect-indicator &
+
+# Nextcloud file sync
+nextcloud --background &
+
+# Music
+mpd &
+
+# Mah visualizer
+xava &
+
+# VM audio
+scream -p 4010 -u &
+
+# Compositor
+picom &
+
+# Fixes dumb wallpaper problems with multimonitor on the MATE DE
+#dumb-mate-wallpaper-fixer
+
+# Notification manager
+dunst &
+
+# Detect when shit changes
+~/.config/i3/scripts/monitor_notify autorandr --change &
+
+# Change everything once
+autorandr --change &
+
+# Apparently Xresources doesnt load when started by "startx"
+xrdb ~/.Xresources &
+
+xmodmap -e "clear lock" &
+xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock" &
+xmodmap -e "keycode 66 = Escape NoSymbol Escape" &
+

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Windows 10 VM
+Comment=Start the Windows 10 QEMU GVT accelerated VM
+Exec=/media/DATA/VMs/windows10/start.sh
+Icon=virtualbox
+Terminal=false
+Categories=Development;

@@ -1,0 +1,20 @@
+#!/bin/bash
+swaylock --font "Terminus" \
+	--font-size 24 \
+	-c 000000 \
+	--ring-color 00000000 \
+	--ring-wrong-color 00000000 \
+	--ring-ver-color 00000000 \
+	-r \
+	--inside-color 00000040 \
+	--text-color ffffffff \
+	-L \
+	-e \
+	--bs-hl-color 00000000 \
+	--key-hl-color 00000010 \
+	--line-color 00000000 \
+	--separator-color 00000000 \
+	-f \
+	-D \
+	-i ~/Pictures/Wallpaper/desktop_hd/alena-aenami-stay-1k.jpg
+

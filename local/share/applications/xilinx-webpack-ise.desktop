@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Xilinx ISE Webpack
+Comment=Do FPGA stuffs
+Path=/media/DATA/Programs/xilinx/ISE_DS/
+Exec=env LD_LIBRARY_PATH=/media/DATA/Programs/xilinx/ISE_DS/ISE/lib/lin64/ LD_PRELOAD=/media/DATA/Programs/xilinx/ISE_DS/ISE/lib/lin64/libXst_Core.so XILINX=/media/DATA/Programs/xilinx/ISE_DS /media/DATA/Programs/xilinx/ISE_DS/ISE/bin/lin64/ise %u
+Icon=xilinx-ise
+Terminal=false
+Categories=Development;

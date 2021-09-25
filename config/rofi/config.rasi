@@ -1,0 +1,28 @@
+configuration {
+	modi: "combi";
+	width: 50;
+	lines: 15;
+	columns: 1;
+	font: "Terminus (TTF) 12";
+	bw: 5;
+	location: 0;
+	padding: 5;
+	yoffset: 0;
+	xoffset: 0;
+	fixed-num-lines: true;
+	terminal: "footclient";
+	ssh-client: "ssh-hacky-bullshit-with-rofi";
+	ssh-command: "{terminal} {ssh-client} {host}";
+	run-command: "{cmd}";
+	case-sensitive: false;
+	parse-hosts: true;
+	combi-modi: "run,ssh,drun";
+	matching: "normal";
+	separator-style: "none";
+	scrollbar-width: 0;
+	theme: "/home/nikp123/.cache/wal/colors-rofi-dark";
+	kb-mode-next: "Shift+Right,Control+Tab,Alt+l";
+	kb-mode-previous: "Shift+Left,Control+Shift+Tab,Alt+h";
+	kb-row-up: "Up,Control+p,Shift+Tab,Shift+ISO_Left_Tab,Alt+k";
+	kb-row-down: "Down,Control+n,Alt+j";
+}

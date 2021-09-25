@@ -1,0 +1,7 @@
+#!/bin/sh
+drive=$(ls -1 /dev/sd? /dev/mmcblk?|rofi -i -dmenu)
+if [ -z "$drive" ]; then
+	exit -1;
+fi
+
+gksudo -u root "udisksctl power-off -b $drive"

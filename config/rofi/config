@@ -1,0 +1,32 @@
+rofi.modi:                           combi
+rofi.show:                           combi
+rofi.combi-modi:                     run,ssh,drun
+rofi.width:                          50
+rofi.lines:                          15
+rofi.columns:                        1
+rofi.font:                           Terminus (TTF) 12
+#rofi.color-normal:                   #251f1f, #efefef, #251f1f, #ffac18, #efefef
+#rofi.color-urgent:                   #251f1f, #d6b48d, #22231D, #d6b48d, #efefef
+#rofi.color-active:                   #251f1f, #d6dbac, #251f1f, #d6dbac, #251f1f
+#rofi.color-window:                   #251f1f, #bfbfbf, #838383
+rofi.monitor:                        -1
+rofi.bw:                             5
+rofi.location:                       0
+rofi.padding:                        5
+rofi.yoffset:                        0
+rofi.xoffset:                        0
+rofi.fixed-num-lines:                true
+rofi.terminal:                       footclient
+rofi.ssh-client:                     ssh-hacky-bullshit-with-rofi
+rofi.ssh-command:                    {terminal} {ssh-client} {host}
+rofi.run-command:                    {cmd}
+rofi.parse-hosts:                    true
+rofi.matching:                       normal
+rofi.separator-style:                none
+rofi.scrollbar-width:                0
+rofi.case-sensitive:                 false
+rofi.kb-mode-next:                   Shift+Right,Control+Tab,Alt+l
+rofi.kb-mode-previous:               Shift+Left,Control+Shift+Tab,Alt+h
+rofi.kb-row-up:                      Up,Control+p,Shift+Tab,Shift+ISO_Left_Tab,Alt+k
+rofi.kb-row-down:                    Down,Control+n,Alt+j
+rofi.theme:                          /home/nikp123/.cache/wal/colors-rofi-dark

@@ -1,0 +1,53 @@
+#!/bin/sh
+set -m
+
+#wpg -m
+
+# Notification manager
+mako &
+
+# Policy manager
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Session
+openbox-session &
+
+# Manages the "everything bar"
+mkfifo $SWAYSOCK.wob
+tail -f $SWAYSOCK.wob | wob &
+
+# Monitor "manager"
+#./lid-check &
+
+# Terminal emulator server? Yeah don't ask
+foot -s &
+
+# Delay (if needed)
+#sleep 1
+
+#/usr/lib/kdeconnectd &
+#kdeconnect-indicator &
+
+# Nextcloud file sync
+nextcloud --background &
+
+# Music
+mpd &
+
+# Mah visualizer
+#xava &
+
+# VM audio
+scream -p 4010 -u &
+
+# Monitor
+# kanshi &
+
+# Turn off monitor when idle
+swayidle -w \
+    timeout 600 'swaymsg "output HDMI-1 dpms off"' \
+    resume 'swaymsg "output HDMI-1 dpms on"' \
+    lock '~/.config/sway/scripts/lock' \
+    after-resume 'loginctl lock-session' &
+
+

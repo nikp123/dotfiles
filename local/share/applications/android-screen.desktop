@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=ADB screen
+Comment=Share the display of an android device connected through ADB
+Exec=scrcpy
+Icon=android-studio
+Terminal=false
+Categories=Development;

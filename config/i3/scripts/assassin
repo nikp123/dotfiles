@@ -1,0 +1,7 @@
+#!/bin/sh 
+
+while ! wmctrl -l | grep $1; do
+	sleep 0.1
+done
+
+i3-msg [class="$1"] kill

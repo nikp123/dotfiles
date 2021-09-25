@@ -1,0 +1,16 @@
+[user]
+	email = pavlica.nikola@gmail.com
+	name = Nikola Pavlica
+[color]
+	ui = auto
+[core]
+	editor = vim
+	excludesfile = /home/nikp123/.gitignore
+[credential]
+	helper = !pass-git-helper $@
+	useHttpPath = true
+[sendemail]
+	smtpencryption = tls
+	smtpserver = smtp.gmail.com
+	smtpuser = pavlica.nikola@gmail.com
+	smtpserverport = 587

@@ -1,0 +1,25 @@
+#!/bin/bash
+result=$(echo -e "lock\nsleep\nhibernate\nlogoff\nreboot\npoweroff" | rofi -dmenu -font "Terminus (TTF) 12" )
+case $result in
+	"poweroff")
+		poweroff
+		;;
+	"reboot")
+		reboot
+		;;
+	"logoff")
+		i3-msg exit
+		;;
+	"hibernate")
+		xdg-screensaver lock
+		systemctl hibernate
+		;;
+	"sleep")
+		xdg-screensaver lock
+		systemctl suspend
+		;;
+	"lock")
+		xdg-screensaver lock
+		;;
+esac
+

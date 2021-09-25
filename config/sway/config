@@ -1,0 +1,427 @@
+# Default config for sway
+#
+# Copy this to ~/.config/sway/config and edit it to your liking.
+#
+# Read `man 5 sway` for a complete reference.
+
+include "$HOME/.cache/wal/colors-sway"
+
+# window rules
+smart_borders off
+default_border pixel
+titlebar_border_thickness 0
+xwayland on
+for_window [title="."] floating enable
+
+# tile the usual thingies
+for_window [app_id="firefox"] floating disable
+for_window [app_id="firefox" title="\nOpening"] floating enable
+for_window [app_id="foot"] floating disable
+for_window [app_id="ario"] floating disable
+for_window [app_id="qemu"] floating disable
+for_window [app_id="org.gnome.Nautilus"] floating disable
+for_window [app_id="org.gnome.Nautilus" title=""] floating enable
+for_window [instance="spotify"] floating disable
+for_window [instance="element"] floating disable
+
+# Microphone, Screensharing, Video indicator
+for_window [title="Firefox - Sharing Indicator"] floating enable, sticky enable
+
+#for_window [class="^.*"] border pixel 3
+#for_window [title="XAVA"] floating enable
+#for_window [title="XAVA"] border none
+#for_window [title="Brightness control"] floating enable
+#for_window [title="WineDesktop*"] floating enable
+#for_window [title="Select file"] floating enable
+#for_window [title="KDE Connect Indicator"] floating enable
+#for_window [title="anbox"] floating enable
+
+### Variables
+#
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+# Home row direction keys, like vim
+#set $left h
+#set $down j
+#set $up k
+#set $right l
+
+# Your preferred terminal emulator
+set $term footclient
+#set $term kitty -e fish
+
+# Prefered web browser
+set $browser systemd-run --scope --user -p MemoryLimit=2G firefox
+
+# Preferred file manager
+set $fileman nautilus
+
+# Preferred PDF viewer
+set $pdf ~/.config/sway/scripts/ib
+
+# Script for managing monitors
+set $settings ~/.config/sway/scripts/monitor_config
+
+# Your preferred application launcher
+set $menu rofi -show combi -show-icons -combi-modi drun#run#ssh
+#set $menu ulauncher-toggle
+#set $menu yofi
+
+### Output configuration
+#
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+output * background $wallpaper fill
+#
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+# Disable Wi-Fi when docked, obviously
+bindswitch lid:on output eDP-1 disable
+bindswitch lid:off output eDP-1 enable
+
+focus output HDMI-A-1
+
+### Idle configuration
+#
+# Example configuration:
+#
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * dpms off"' \
+#               resume 'swaymsg "output * dpms on"' \
+#          before-sleep 'swaylock -f -c 000000'
+#
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+#exec swayidle -w \
+#          timeout 600 'swaymsg "output * dpms off"' \
+#               resume 'swaymsg "output * dpms on"' \
+#         before-sleep 'dm-tool lock' \
+
+### Input configuration
+#
+# Example configuration:
+#
+#   input "2:14:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
+#
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+#input "2:7:SynPS/2_Synaptics_TouchPad" {
+#    dwt enabled
+#    tap enabled
+#    natural_scroll enabled
+#    middle_emulation enabled
+#}
+
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+    dwt disabled
+    tap enabled
+    natural_scroll disabled
+    middle_emulation enabled
+}
+
+input * {
+    xkb_layout us,hr,rs,de
+    xkb_options grp:alt_shift_toggle,caps:escape
+}
+
+### Key bindings
+#
+# Basics:
+#
+bindsym --to-code {
+    # Pulse Audio controls
+    XF86AudioRaiseVolume       exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob
+    XF86AudioLowerVolume       exec pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob
+    XF86AudioMute              exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.wob ) || pamixer --get-volume > $SWAYSOCK.wob
+
+    Shift+XF86AudioRaiseVolume exec pamixer --default-source -ui 2 && pamixer --default-source --get-volume > $SWAYSOCK.wob
+    Shift+XF86AudioLowerVolume exec pamixer --default-source -ud 2 && pamixer --default-source --get-volume > $SWAYSOCK.wob
+    # These two should be the same
+    Shift+XF86AudioMute        exec pamixer --default-source --toggle-mute && ( pamixer --default-source --get-mute && echo 0 > $SWAYSOCK.wob ) || pamixer --default-source --get-volume > $SWAYSOCK.wob
+    XF86AudioMicMute           exec pamixer --default-source --toggle-mute && ( pamixer --default-source --get-mute && echo 0 > $SWAYSOCK.wob ) || pamixer --default-source --get-volume > $SWAYSOCK.wob
+
+    # Media player controls
+    XF86AudioPlay   exec ~/.config/scripts/playerctl play-pause
+    XF86AudioPrev   exec ~/.config/scripts/playerctl previous
+    XF86AudioNext   exec ~/.config/scripts/playerctl next
+    $mod+p          exec ~/.config/scripts/playerctl play-pause
+    $mod+Shift+u    exec ~/.config/scripts/playerctl previous
+    $mod+Shift+i    exec ~/.config/scripts/playerctl next
+    $mod+u          exec ~/.config/scripts/playerctl position 10-
+    $mod+i          exec ~/.config/scripts/playerctl position 10+
+    #XF86AudioPlay   exec mpc --host "thisisaverysecurepassword@localhost" toggle
+    #XF86AudioPrev   exec mpc --host "thisisaverysecurepassword@localhost" prev
+    #XF86AudioNext   exec mpc --host "thisisaverysecurepassword@localhost" next
+    #$mod+p          exec mpc --host "thisisaverysecurepassword@localhost" toggle
+    #$mod+Shift+u    exec mpc --host "thisisaverysecurepassword@localhost" prev
+    #$mod+Shift+i    exec mpc --host "thisisaverysecurepassword@localhost" next
+    #$mod+u          exec mpc --host "thisisaverysecurepassword@localhost" seek -10
+    #$mod+i          exec mpc --host "thisisaverysecurepassword@localhost" seek +10
+
+    # Screen brightness controls
+    XF86MonBrightnessUp     exec light -T 1.1 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob;
+    XF86MonBrightnessDown   exec light -T 0.9 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob;
+    XF86Display             exec light -G|grep 0.00 && light -I || (light -O; light -S 0)
+
+    # Screenshot
+    --release Print  exec grim -g \"$(slurp)" - | wl-copy
+
+    --release $mod+Print exec swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp | xargs -I{} grim -g {} - | wl-copy
+
+    $mod+Shift+Print exec ~/.config/sway/scripts/ocr-copy
+
+    $mod+Shift+Pause exec ~/.config/sway/scripts/ocr-read
+
+    # start a web browser
+    $mod+b exec $browser
+
+    # start a filemanager
+    $mod+n exec $fileman
+
+    # open settings menu
+    $mod+Shift+s exec $settings
+
+    # start a terminal
+    $mod+Return exec $term
+
+    # kill focused window
+    $mod+Shift+q kill
+
+    # start your launcher
+    $mod+d exec $menu
+
+    # books i currenty use
+    $mod+m exec $pdf
+
+    # brightness control
+    $mod+g exec brightnessctl
+}
+
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+    # Despite the name, also works for non-floating windows.
+    # Change normal to inverse to use left mouse button for resizing and right
+    # mouse button for dragging.
+    floating_modifier $mod normal
+
+bindsym --to-code {
+    # reload the configuration file
+    $mod+Shift+r reload
+
+    # exit sway (logs you out of your Wayland session)
+    $mod+Shift+e exec bash ~/.config/sway/scripts/exit
+
+#
+# Moving around:
+#
+    # Move your focus around
+    #bindsym $mod+$left focus left
+    #bindsym $mod+$down focus down
+    #bindsym $mod+$up focus up
+    #bindsym $mod+$right focus right
+    # or use $mod+[up|down|left|right]
+    $mod+Left focus left
+    $mod+Down focus down
+    $mod+Up focus up
+    $mod+Right focus right
+
+    # _move_ the focused window with the same, but add Shift
+    #bindsym $mod+Shift+$left move left
+    #bindsym $mod+Shift+$down move down
+    #bindsym $mod+Shift+$up move up
+    #bindsym $mod+Shift+$right move right
+    # ditto, with arrow keys
+    $mod+Shift+Left move left
+    $mod+Shift+Down move down
+    $mod+Shift+Up move up
+    $mod+Shift+Right move right
+}
+
+#
+# Workspaces:
+#
+    workspace 1 output  eDP-1
+    workspace 2 output  HDMI-A-1
+    workspace 3 output  HDMI-A-1
+    workspace 4 output  HDMI-A-1
+    workspace 5 output  HDMI-A-1
+    workspace 6 output  HDMI-A-1
+    workspace 7 output  HDMI-A-1
+    workspace 8 output  HDMI-A-1
+    workspace 9 output  HDMI-A-1
+    workspace 10 output HDMI-A-1
+#
+# Workspace app behavior
+#
+#    assign [class="Viber"] workspace 10
+
+bindsym --to-code {
+    # switch to workspace
+    $mod+1 workspace 1
+    $mod+2 workspace 2
+    $mod+3 workspace 3
+    $mod+4 workspace 4
+    $mod+5 workspace 5
+    $mod+6 workspace 6
+    $mod+7 workspace 7
+    $mod+8 workspace 8
+    $mod+9 workspace 9
+    $mod+0 workspace 10
+    # move focused container to workspace
+    $mod+Shift+1 move container to workspace 1
+    $mod+Shift+2 move container to workspace 2
+    $mod+Shift+3 move container to workspace 3
+    $mod+Shift+4 move container to workspace 4
+    $mod+Shift+5 move container to workspace 5
+    $mod+Shift+6 move container to workspace 6
+    $mod+Shift+7 move container to workspace 7
+    $mod+Shift+8 move container to workspace 8
+    $mod+Shift+9 move container to workspace 9
+    $mod+Shift+0 move container to workspace 10
+    # Note: workspaces can have any name you want, not just numbers.
+    # We just use 1-10 as the default.
+
+#
+# Layout stuff:
+#
+    # gaps
+    $mod+equal gaps inner current plus 10
+    $mod+minus gaps inner current minus 10
+
+    # You can "split" the current object of your focus with
+    # $mod+b or $mod+v, for horizontal and vertical splits
+    # respectively.
+    $mod+h splith
+    $mod+v splitv
+
+    # Switch the current container between different layout styles
+    $mod+s layout stacking
+    $mod+w layout tabbed
+    $mod+e layout toggle split
+
+    # Make the current focus fullscreen
+    $mod+f fullscreen
+
+    # Toggle the current focus between tiling and floating mode
+    $mod+Shift+space floating toggle
+
+    # Swap focus between the tiling area and the floating area
+    $mod+space focus mode_toggle
+
+    # move focus to the parent container
+    $mod+a focus parent
+#
+# Scratchpad:
+#
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
+
+    # Move the currently focused window to the scratchpad
+    #bindsym $mod+Shift+minus move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    #bindsym $mod+minus scratchpad show
+}
+#
+# Resizing containers:
+#
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    #bindsym $left resize shrink width 10px
+    #bindsym $down resize grow height 10px
+    #bindsym $up resize shrink height 10px
+    #bindsym $right resize grow width 10px
+
+    bindsym --to-code {
+        # ditto, with arrow keys
+        Left resize shrink width 2px
+        Down resize grow height 2px
+        Up resize shrink height 2px
+        Right resize grow width 2px
+
+        # return to default mode
+        Return mode "default"
+        Escape mode "default"
+    }
+}
+bindsym --to-code $mod+r mode "resize"
+
+# Looks
+
+## class                border   backgr.  text     indicator child_border
+#client.focused          $color15 $color12 $color15 $color15  $color12
+#client.focused_inactive $color1  $color12 $color1  $color12  $color1
+#client.unfocused        $color1  $color12 $color1  $color12  $color1
+#client.urgent           $color12 $color12 $color1  $color12  $color12
+#client.placeholder      $color12 $color12 $color1  $color12  $color12
+
+client.focused          #5294E2 #285577 #ffffff #2e9ef4   #5294E2
+client.focused_inactive #383C4A #5f676a #ffffff #484e50   #383C4A
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #900000 #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+font pango:Terminus (TTF) 12
+
+# Set gap sizes
+gaps inner 0
+gaps outer 0
+
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+#bar {
+#	colors {
+#		background $color0
+#		statusline $color4
+#		separator  $color0
+#
+#		# Type             border  background font
+#		focused_workspace  $color4 $color0 $color4
+#		active_workspace   $color0 $color0 $color4
+#		inactive_workspace $color0 $color0 $color4
+#		urgent_workspace   #16a085 $color0 #E5201D
+#
+#		#background #000000
+#		#statusline #ffffff
+#		#separator #000000
+#
+#		## Type             border  background font
+#		#focused_workspace  #5294E2 #202020 #ffffff
+#		#active_workspace   #000000 #202020 #ffffff
+#		#inactive_workspace #000000 #000000 #ffffff
+#		#urgent_workspace   #aa0000 #990000 #ffffff
+#	}
+#	#status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#	#status_command i3status -c ~/.config/sway/i3status.conf
+#	status_command swaystatus ~/.config/sway/swaystatus.json
+#	position bottom
+#	icon_theme "Numix Circle"
+#}
+
+# Teh bar
+exec waybar
+
+# Autostart programs
+exec ~/.config/sway/scripts/onetime-services
+
+# Viber is buggy as fuck
+#exec ~/.config/autostart-scripts/viber
+#exec ~/.config/i3/scripts/assassin Viber
+
+include /etc/sway/config.d/*

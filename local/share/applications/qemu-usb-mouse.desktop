@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=USB Mouse
+Comment=Switch to a mouse cursor inside your QEMU VM
+Exec=/home/nikp123/.config/scripts/qemu/usb_mouse.sh
+Icon=input-mouse
+Terminal=false
+Categories=Development;

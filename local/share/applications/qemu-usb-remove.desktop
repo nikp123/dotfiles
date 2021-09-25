@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Remove USB
+Comment=Remove a USB device from a QEMU VM
+Exec=/home/nikp123/.config/scripts/qemu/remove_usb.sh
+Icon=usbpendrive_unmount
+Terminal=false
+Categories=Development;

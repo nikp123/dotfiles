@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=USB Tablet
+Comment=Switch to a tablet cursor inside your QEMU VM
+Exec=/home/nikp123/.config/scripts/qemu/usb_tablet.sh
+Icon=input-tablet
+Terminal=false
+Categories=Development;

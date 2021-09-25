@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Wake-up Aspire-Server
+Comment=Wake the sleepy server up
+Exec=/usr/bin/wol 00:1f:16:b3:b7:c3
+Icon=server
+Terminal=false
+Categories=Development;

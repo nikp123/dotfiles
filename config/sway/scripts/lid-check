@@ -1,0 +1,17 @@
+#!/bin/sh
+
+killall -9 kanshi
+
+kanshi &
+
+sleep 0.5
+
+#result=$(cat /proc/acpi/button/lid/LID/state|grep open)
+#
+#if [ -z "$result" ]; then
+#	echo "Closed?"
+#	swaymsg output eDP-1 disable
+#else
+#	echo "Open!"
+#	swaymsg output eDP-1 enable
+#fi

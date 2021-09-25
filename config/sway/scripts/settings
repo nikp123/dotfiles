@@ -1,0 +1,14 @@
+#!/bin/bash
+result=$(echo -e "Internet\nDisplay\nBluetooth" | rofi -dmenu -font "Terminus (TTF) 12" )
+case $result in
+	"Display")
+		~/.config/sway/scripts/monitor_config
+		;;
+	"Bluetooth")
+		rofi-bluetooth
+		;;
+	"Internet")
+		rofi-wifi-menu
+		;;
+esac
+

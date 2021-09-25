@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Add USB
+Comment=Add a USB device to a QEMU VM
+Exec=/home/nikp123/.config/scripts/qemu/add_usb.sh
+Icon=virt-viewer-usb
+Terminal=false
+Categories=Development;
