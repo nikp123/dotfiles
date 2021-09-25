@@ -71,7 +71,7 @@ export WINEESYNC=1
 export WINEARCH=win64
 
 # Import my account keys into the environment
-export GOOGLE_API_KEY=$(cat ~/.config/scripts/keys)
+export GOOGLE_API_KEY=$(cat ~/.config/keys)
 
 export GOPATH=/media/DATA/Programs/go
 
