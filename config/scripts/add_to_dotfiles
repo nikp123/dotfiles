@@ -47,8 +47,8 @@ if target[:len(home)] != home:
 if not target[2].startswith('.'):
     raise ValueError('Not a dot directory :(')
 
-#if not (os.path.isdir(targetpath) or os.path.isfile(targetpath)):
-#    raise ValueError('The specified path is non-existant')
+if not (os.path.isdir(targetpath) or os.path.isfile(targetpath)):
+    raise ValueError('The specified path is non-existant')
 
 # Get directory inside repo
 inside_repo = target[len(home):]

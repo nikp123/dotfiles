@@ -1,15 +1,9 @@
 #!/bin/python
 
 import os
-import argparse
 import subprocess
 
-os.environ['API_USER'] = 'username'
-os.environ['API_PASSWORD'] = 'secret'
-
-
 file_list = os.environ['NAUTILUS_SCRIPT_SELECTED_FILE_PATHS'].split('\n')
-
 
 convert_cmd = ["convert"]
 
