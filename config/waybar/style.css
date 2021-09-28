@@ -1,0 +1,345 @@
+/* @define-color bg-color rgb (71, 95, 148);*/             /* #475f94 */
+/* @define-color bg-color rgb (184, 187, 38);*/             /* #475f94 */
+@define-color bg-color rgb(60, 65, 68);            /* #1D2021 */
+@define-color bg-color-0 rgb (60, 65, 68);            /* #1D2021 */
+@define-color bg-color-1 rgb(71, 95, 148);            /* #475f94 */
+@define-color bg-color-2 rgb(16, 122, 176);           /* #107AB0 */
+@define-color bg-color-3 rgb(1, 115, 116);            /* #017374 */
+@define-color bg-color-4 rgb(31, 59, 77);             /* #1F3B4D */
+@define-color bg-color-5 rgb(16, 166, 116);           /* #10A674 */
+@define-color bg-color-6 rgb(73, 132, 184);           /* #4984B8 */
+@define-color bg-color-7 rgb(0, 1, 51);               /* #000133 */
+@define-color bg-color-8 rgb(8, 120, 127);            /* #08787F */
+@define-color bg-color-9 rgb(33, 71, 97);             /* #214761 */
+@define-color bg-color-10 rgb(108, 52, 97);           /* #6C3461 */
+@define-color bg-color-11 rgb(0, 82, 73);             /* #005249 */
+@define-color bg-color-12 rgb(49, 102, 138);          /* #31668A */
+@define-color bg-color-13 rgb(106, 110, 9);           /* #6A6E09 */
+@define-color bg-color-14 rgb(91, 124, 153);          /* #5B7C99 */
+/*@define-color bg-color-15 rgb(90, 134, 173); */         /* #5A86AD */
+/*@define-color bg-color-15 rgb(60, 65, 68); */           /* #1D2021 */
+/*@define-color bg-color-15 rgb(179, 0, 179);*/            /* #1D2021 */
+/*@define-color bg-color-15 rgb(100, 67, 94);*/            /* #1D2021 */
+@define-color bg-color-15 rgb(60, 65, 68);            /* #1D2021 */
+@define-color bg-color-16 rgb(41, 41, 61);            /* #29293d  */
+
+@define-color fg-color rgb (243, 244, 245);           /* #f3f4f5 */
+@define-color alert-bg-color rgb (189, 44, 64);       /* #bd2c40 */
+@define-color alert-fg-color rgb (255,255,255);       /* #ffffff */
+@define-color inactive-fg-color rgb(144, 153, 162);   /* #9099a2 */
+@define-color inactive-bg-color rgb(64, 69, 82);      /* #404552 */
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Terminus (TTF)";
+    font-size: 14px;
+    min-height: 0;
+    opacity: 1.0;
+}
+
+window#waybar {
+    background-color: rgba(43, 48, 59, 0.5);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    color: @fg-color;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.4;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: @fg-color;
+}
+*/
+
+window#waybar.termite {
+    background-color: @bg-color;
+}
+
+window#waybar.chromium {
+    background-color: @bg-color;
+    border: none;
+}
+
+#workspaces button {
+    padding: 0 2px;
+    /* background-color: rgba (71, 95, 148, 0.3); */
+    background-color: transparent;
+    color: @fg-color;
+    border-bottom: 3px solid transparent;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inherit;
+    border-bottom: 3px solid @fg-color;
+}
+
+#workspaces button.focused {
+    background-color: @bg-color;
+    border-bottom: 3px solid @fg-color;
+}
+
+#workspaces button.urgent {
+    background-color: @alert-bg-color;
+}
+
+#mode {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color;
+    border-bottom: 3px solid @fg-color;
+}
+
+#tray {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-0;
+    color: @fg-color;
+}
+
+
+#clock {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-1;
+    color: @fg-color;
+}
+
+#custom-weather {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-2;
+    color: @fg-color;
+}
+
+#custom-covid {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-16;
+    color: @fg-color;
+}
+
+#backlight {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-3;
+    color: @fg-color;
+}
+
+#language {
+    padding: 0 10px;
+    margin: 0 4px;
+    min-width: 14px;
+    background-color: @bg-color-3;
+    color: @fg-color;
+}
+
+#battery {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-4;
+    color: @fg-color;
+}
+#battery.charging {
+    color: @fg-color;
+    background-color: @bg-color;
+}
+#battery.warning:not(.charging) {
+    color: @alert-fg-color;
+    background-color: @alert-bg-color;
+}
+#battery.critical:not(.charging) {
+    color: @alert-fg-color;
+    background-color: @alert-bg-color;
+}
+/** #battery.critical:not(.charging) {
+    background-color: @alert-bg-color;
+    color: @fg-color;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+} **/
+
+#custom-bat0,
+#custom-bat0.charging {
+    padding: 0 10px;
+    margin: 0 4px;
+    color: @fg-color;
+    background-color: @bg-color-10;
+}
+#custom-bat0.warning:not(.charging):not(.full) {
+    padding: 0 10px;
+    margin: 0 4px;
+    color: @alert-fg-color;
+    background-color: @alert-bg-color;
+}
+#custom-bat0.critical:not(.charging):not(.full) {
+    background-color: @alert-bg-color;
+    color: @fg-color;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-6;
+    color: @fg-color;
+}
+
+#custom-vpn {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-6;
+    color: @fg-color;
+}
+
+#pulseaudio {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-12;
+    color: @fg-color;
+}
+
+#temperature {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-7;
+    color: @fg-color;
+}
+
+#backlight {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-8;
+    color: @fg-color;
+}
+
+#pulseaudio {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-9;
+    color: @fg-color;
+}
+
+#custom-media {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-10;
+    color: @fg-color;
+}
+
+#cpu {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-13;
+    color: @fg-color;
+}
+
+#memory {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-5;
+    color: @fg-color;
+}
+
+#idle_inhibitor {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-14;
+    color: @fg-color;
+}
+
+#mpd {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-15;
+    color: @fg-color;
+}
+
+#custom-musicstat {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-15;
+    color: @fg-color;
+}
+
+#custom-kbd {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-11;
+    color: @fg-color;
+}
+
+#custom-kbd.none {
+    background-color: transparent;
+    color: transparent;
+}
+
+
+
+@keyframes blink {
+    to {
+        background-color: @fg-color;
+        color: @bg-color;
+    }
+}
+
+label:focus {
+    background-color: @bg-color;
+}
+
+#network.disconnected {
+    background-color: @alert-bg-color;
+}
+
+#custom-vpn.disconnected {
+    background-color: @alert-bg-color;
+}
+
+#pulseaudio.muted {
+    background-color: @inactive-bg-color;
+    color: @inactive-fg-color;
+}
+
+#custom-media.custom-vlc {
+    background-color: @bg-color;
+}
+
+#temperature.critical {
+    background-color: @alert-bg-color;
+}
+
+#idle_inhibitor.activated {
+    background-color: @fg-color;
+    color: @bg-color;
+}
+
+#mpd.disconnected {
+    background-color: transparent;
+    color: transparent;
+}
+
+#mpd.stopped {
+    background-color: transparent;
+    color: transparent;
+}
+
+#mpd.paused {
+    background-color: @inactive-bg-color;
+    color: @inactive-fg-color;
+}
