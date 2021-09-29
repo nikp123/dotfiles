@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Config directories
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
@@ -24,9 +26,9 @@ export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
 export LESSHISTFILE="$XDG_CONFIG_HOME"/less/history
 
 # Completions
-if [ -f /usr/lib/python3.7/site-packages/habitica/shell_completion.sh ]; then
-    /usr/lib/python3.7/site-packages/habitica/shell_completion.sh
-fi
+#if [ -f /usr/lib/python3.7/site-packages/habitica/shell_completion.sh ]; then
+#    /usr/lib/python3.7/site-packages/habitica/shell_completion.sh
+#fi
 
 # CHLohr build system
 export NDK=/opt/android-ndk/
@@ -71,7 +73,7 @@ export WINEESYNC=1
 export WINEARCH=win64
 
 # Import my account keys into the environment
-export GOOGLE_API_KEY=$(cat ~/.config/keys)
+#export GOOGLE_API_KEY=$(cat ~/.config/keys)
 
 export GOPATH=/media/DATA/Programs/go
 
@@ -92,5 +94,9 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 #export SSH_AUTH_SOCK
 
 # GNU's a bunch-o-boomers
-CC=clang
+export CC=clang
 
+# Rust is also in the annoying as fuck gang
+export RUSTUP_HOME=$HOME/.local/share/rustup
+export CARGO_HOME=$HOME/.local/share/cargo
+export RUSTC_WRAPPER=$HOME/.local/share/cargo/bin/sccache

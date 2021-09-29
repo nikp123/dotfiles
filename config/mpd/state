@@ -1,0 +1,495 @@
+sw_volume: 54
+audio_device_state:1:PulseAudio
+audio_device_state:1:toggle_visualizer
+state: pause
+current: 248
+time: 2.436000
+random: 1
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Artists/7 Minutes Dead/7MD EP/Sidewinder.opus
+1:Artists/7 Minutes Dead/7MD EP/The Follower.opus
+2:Artists/7 Minutes Dead/7MD EP/The Passing.opus
+3:Artists/7 Minutes Dead/7MD EP/Free.opus
+4:SoundCloud/7 Minutes Dead/The Divide.mp3
+5:SoundCloud/Aero Chord x Fractal/Until The End (feat. QAILA).mp3
+6:SoundCloud/Aethoro/Riverlight (feat. vally.exe).mp3
+7:SoundCloud/Aiobahn & Vin/If We Never.mp3
+8:SoundCloud/Alex Skrindo & Geoxor/KawaiiStep.mp3
+9:SoundCloud/Anevo & Laura Brehm/Universe.mp3
+10:SoundCloud/Astronaut/Champions (feat. Harry Brooks Jnr) (Volant Remix).mp3
+11:SoundCloud/Astronaut/Champions (feat. Harry Brooks Jnr) (WRLD Remix).mp3
+12:SoundCloud/Astronaut/Quantum (Virtual Riot Remix).mp3
+13:SoundCloud/Astronaut/Quantum.mp3
+14:SoundCloud/Astronaut/Rain (Raider Remix).mp3
+15:SoundCloud/Astronaut & Far Too Loud/War (F.O.O.L & Didrick Remix).mp3
+16:Artists/Au5/Alchemy LP/Alchemy.opus
+17:Artists/Au5/Alchemy LP/Vapour.opus
+18:Artists/Au5/Alchemy LP/Myst.opus
+19:Artists/Au5/Alchemy LP/Neptuna.opus
+20:Artists/Au5/Alchemy LP/Etheros.opus
+21:Artists/Au5/Alchemy LP/The Cliff.opus
+22:Artists/Au5/Alchemy LP/Return to Moonland.opus
+23:Artists/Au5/Freefall EP/Au5 - Freefall - 01 Freefall ft. Cristina Soto.mp3
+24:Artists/Au5/Freefall EP/Au5 - Freefall - 02 Shock Diamond ft. Cristina Soto.mp3
+25:Artists/Au5/Freefall EP/Au5 - Freefall - 03 Emergence ft. Cristina Soto.mp3
+26:Artists/Au5/Freefall EP/Au5 - Freefall - 04 Emergence ft. Cristina Soto (Au5 Remix).mp3
+27:SoundCloud/Au5/Answers.mp3
+28:SoundCloud/Au5/Flashback.mp3
+29:SoundCloud/Au5/Goo Lagoon.mp3
+30:SoundCloud/Au5/I Miss You Feat. Kenny Raye (Mr. Bill Remix).mp3
+31:SoundCloud/Au5/Interstellar (feat. Dankya Nadeua)[NCS Release].mp3
+32:SoundCloud/Au5/Make You Cry.mp3
+33:SoundCloud/Au5/Reiteration.mp3
+34:SoundCloud/Au5/The Aether.mp3
+35:SoundCloud/Au5/The Void.mp3
+36:SoundCloud/Au5/Blossom.mp3
+37:SoundCloud/Au5/Moonland.mp3
+38:SoundCloud/Au5/Infinite Wings (Feat. Ashley Apollodor).mp3
+39:SoundCloud/Au5/Dragonfly Ft. Evoke [Dancing Astronaut Premiere].mp3
+40:SoundCloud/Au5/Divine.mp3
+41:SoundCloud/Au5/Follow You (feat Danyka Nadeau) (Rootkit Remix).mp3
+42:SoundCloud/Au5/Snowblind (feat. Tasha Baxter).mp3
+43:SoundCloud/Au5/Crossroad (feat. Danyka Nadeau).mp3
+44:SoundCloud/Au5/Inside (feat. Danyka Nadeau).mp3
+45:SoundCloud/Au5/Guardians (feat. Fiora).mp3
+46:SoundCloud/Au5/The Journey (feat. Trove).mp3
+47:SoundCloud/Au5/Eden (feat. Danyka Nadeau).mp3
+48:SoundCloud/Au5/Goodbye (feat. NOHC).mp3
+49:To be tagged/Au5 - Serenata (Radio Edit).opus
+50:SoundCloud/Au5 & AMIDY/Way Down (feat. Karra).mp3
+51:Artists/Au5 & Chime/Voidwalkers.opus
+52:SoundCloud/Au5 & Crystal Skies/Cataclysm.mp3
+53:Artists/Au5 & Fractal/Secret Weapon EP/Blue.mp3
+54:Artists/Au5 & Fractal/Secret Weapon EP/Secret Weapon.mp3
+55:SoundCloud/Au5 & Fractal/Ison.mp3
+56:SoundCloud/Au5 & Fractal/Halcyon.mp3
+57:SoundCloud/Au5 & Fractal/Smoke.mp3
+58:SoundCloud/Au5 & Juventa/Dying Star (feat. Charlie Bath) [2013].mp3
+59:SoundCloud/Au5 & Last Heroes/Lush (feat. Holly Drummond).mp3
+60:SoundCloud/Bad Computer/Destroy Me.mp3
+61:SoundCloud/Bad Computer/Sanctuary.mp3
+62:SoundCloud/Bad Computer/Voyage (feat. Savoi).mp3
+63:SoundCloud/Bad Computer/New Dawn.mp3
+64:SoundCloud/Bad Computer/Riddle.mp3
+65:SoundCloud/Bad Computer/2U.mp3
+66:SoundCloud/Bad Computer/Silhouette (feat. Skyelle).mp3
+67:SoundCloud/Bassnectar/Empathy.mp3
+68:SoundCloud/Bensley/Vex.mp3
+69:SoundCloud/Bensley/Fade Out.mp3
+70:SoundCloud/Botnek & I See MONSTAS/Deeper Love.mp3
+71:SoundCloud/Bustre/Everythings Different.mp3
+72:SoundCloud/Bustre/Combine.mp3
+73:SoundCloud/C418/Sweden (Caution & Crisis Remix).mp3
+74:SoundCloud/Cadmium X Skrybe/Outcry (feat. Emm).mp3
+75:Artists/Carpenter Brut/Turbo Killer.opus
+76:SoundCloud/Case & Point/Savage.mp3
+77:SoundCloud/Case & Point/Prism.mp3
+78:SoundCloud/Case & Point/Error Code.mp3
+79:SoundCloud/Case & Point/Fugitive.mp3
+80:SoundCloud/Case & Point/Paradigm.mp3
+81:SoundCloud/Chris Ramos & MC Flipside/What You Waiting For.mp3
+82:SoundCloud/CloudNone/Welcome To London.mp3
+83:SoundCloud/CloudNone/None Trick Pony.mp3
+84:SoundCloud/CloudNone/Clapham Rain.mp3
+85:SoundCloud/CloudNone/Spring Snow.mp3
+86:SoundCloud/CloudNone & Laura Brehm/Changed.mp3
+87:SoundCloud/Conro/Close.mp3
+88:SoundCloud/Conro/On My Way Up.mp3
+89:SoundCloud/Conro/City Lights (feat. Royal).mp3
+90:SoundCloud/Conro/I Wanna Know.mp3
+91:SoundCloud/Conro/All I Want.mp3
+92:SoundCloud/Darude/Sandstorm (Righten DUBSTEP Remix).mp3
+93:SoundCloud/daydreamer/Swoon.mp3
+94:SoundCloud/daydreamer/Skyscrapers.mp3
+95:SoundCloud/daydreamer/Pages.mp3
+96:SoundCloud/Deadmau5/The Veldt (Full Instrumental Mix).mp3
+97:SoundCloud/Deadmau5/Let Go (feat. Grabbitz) [Extended Edit].mp3
+98:SoundCloud/Define Light & Miles Dominic/Elsewhere.mp3
+99:SoundCloud/Dion Timmer/Till I Make It (feat. Tima Dee).mp3
+100:SoundCloud/Direct/Eternity.mp3
+101:SoundCloud/Direct/Memory (feat. Holly Drummond).mp3
+102:SoundCloud/Direct/Lark.mp3
+103:SoundCloud/Direct & Labisch/Make A Move (feat. Openwater).mp3
+104:SoundCloud/Direct & Mr FijiWiji/Hysteria.mp3
+105:SoundCloud/Direct, Mr FijiWiji, & Holly Drummond/Trust In Me.mp3
+106:SoundCloud/Direct & Park Avenue/Ill Go.mp3
+107:SoundCloud/Dirtyphonics & Sullivan King/Sight Of Your Soul.mp3
+108:SoundCloud/Disfigure/Blank.mp3
+109:SoundCloud/Displaced/Rugged.mp3
+110:SoundCloud/DJ Gontran/Outrun.mp3
+111:SoundCloud/Draper/Inertia.mp3
+112:SoundCloud/Dustkey/So Step Up.mp3
+113:SoundCloud/Duumu/Blinded.mp3
+114:SoundCloud/Elephante (feat. Bishop)/Closer (Virtu Remix).mp3
+115:SoundCloud/Eminence & Alex Farway/Belgium.mp3
+116:SoundCloud/Eminence & Soulero/December (Ft. Memia).mp3
+117:SoundCloud/Eminence & Soulero/Invisible (feat. Mari-Anna).mp3
+118:SoundCloud/Eminence & Supermans Feinde/Night Goes On (feat. QAILA).mp3
+119:SoundCloud/Ephixa/Trance Chords.mp3
+120:Artists/Various Artists/Monstercat - 5 year Anniversary/Ephixa & Stephen Walking - Matches (feat. Aaron Richards).mp3
+121:SoundCloud/Explorers of the Internet/if mozart lived in 2021.mp3
+122:SoundCloud/Famous Spear/A Machines Dream.mp3
+123:SoundCloud/Faux Tales/Behemoth.mp3
+124:SoundCloud/Faux Tales/Atlas.mp3
+125:SoundCloud/Favright/Green Storm.mp3
+126:SoundCloud/Favright/Nerve.mp3
+127:SoundCloud/Feint/Defiant (Ft. Laura Brehm).mp3
+128:SoundCloud/Feint/Promises (Liquicity Records).mp3
+129:SoundCloud/Feint/Time Bomb (feat. Veela & Boyinaband).mp3
+130:SoundCloud/Feint/Fury.mp3
+131:SoundCloud/Feint/Snake Eyes (feat. CoMa).mp3
+132:SoundCloud/Feint/Lonesong (Monstercat).mp3
+133:SoundCloud/Feint/Homebound.mp3
+134:SoundCloud/Feint/Phosphor (feat. Miyoki).mp3
+135:SoundCloud/Feint/We Wont Be Alone (feat. Laura Brehm).mp3
+136:SoundCloud/Feint/Words (feat. Laura Brehm).mp3
+137:SoundCloud/Feint/Drifters (feat. Elizaveta).mp3
+138:SoundCloud/Feint/Pastels.mp3
+139:SoundCloud/F.O.O.L/Fairytaler.mp3
+140:SoundCloud/F.O.O.L/Showdown.mp3
+141:SoundCloud/F.O.O.L & Power Glove/Mercenary.mp3
+142:Artists/Fractal/Gaia LP/Amor (feat. Syrin).opus
+143:Artists/Fractal/Gaia LP/Collide (feat. Danyka Nadeau).opus
+144:Artists/Fractal/Gaia LP/Omni.opus
+145:Artists/Fractal/Gaia LP/Fire Away (feat. Danyka Nadeau).opus
+146:Artists/Fractal/Gaia LP/Escape.opus
+147:Artists/Fractal/Gaia LP/Voyage.opus
+148:Artists/Fractal/Gaia LP/Sanctum.opus
+149:Artists/Fractal/Gaia LP/Skyline.opus
+150:Artists/Fractal/Gaia LP/Wind Mantras.opus
+151:SoundCloud/Fractal/Collide (feat. Danyka Nadeau).mp3
+152:SoundCloud/Fractal/Elyria (ft. Danyka Nadeau).mp3
+153:SoundCloud/Fractal/Fire Away (feat. Danyka Nadeau).mp3
+154:SoundCloud/Fractal/Elements.mp3
+155:SoundCloud/Fractal/Atrium.mp3
+156:SoundCloud/Fractal/Duality.mp3
+157:SoundCloud/Fractal/Itvara.mp3
+158:SoundCloud/Fractal/Contact.mp3
+159:SoundCloud/Fractal/Spection.mp3
+160:SoundCloud/Fractal/Mountain Hunter.mp3
+161:SoundCloud/FWLR/Bust It Out.mp3
+162:SoundCloud/Glacier/Dancing By Myself (feat. QAILA).mp3
+163:SoundCloud/Grabbitz/Float Away.mp3
+164:SoundCloud/Grabbitz/Way Too Deep.mp3
+165:SoundCloud/Grant/Starship.mp3
+166:SoundCloud/Grant, Anevo & Conro/Without You (feat. Victoria Zaro).mp3
+167:SoundCloud/Haywyre/Everchanging.mp3
+168:SoundCloud/Haywyre/Insight.mp3
+169:SoundCloud/Haywyre/Time (feat. CoMa).mp3
+170:SoundCloud/Haywyre/Doppelgänger.mp3
+171:SoundCloud/Haywyre/I Am You.mp3
+172:SoundCloud/Haywyre/Endlessly.mp3
+173:SoundCloud/Hellberg/Stockholm.mp3
+174:SoundCloud/Hellberg/Stereo.mp3
+175:SoundCloud/Hellberg/Dimensions.mp3
+176:SoundCloud/Hellberg/Get Up.mp3
+177:SoundCloud/Hellberg/The Girl (feat. Cozi Zuehlsdorff) (Color Source Remix).mp3
+178:SoundCloud/Hellberg/The Girl (feat. Cozi Zuehlsdorff).mp3
+179:SoundCloud/Hellberg & TwoThirds/Farewell.mp3
+180:SoundCloud/Hot Date! & Chrisson/Overcome (This Time).mp3
+181:SoundCloud/Hybrid Minds/In Your Arms (ft. Koven).mp3
+182:SoundCloud/Hyper Potions/Friends.mp3
+183:SoundCloud/Hyper Potions/Unbreakable (feat. Danyka Nadeau).mp3
+184:SoundCloud/Hyper Potions & Subtact/Adventures.mp3
+185:SoundCloud/Illenium/Sleepwalker (VIRTU Remix).mp3
+186:SoundCloud/Illenium/Without You ft. SKYLR (William James Remix).mp3
+187:SoundCloud/Illenium/Without You (Ft. SKYLR) (Ryan Exley Remix).mp3
+188:SoundCloud/Illenium & Said The Sky/Painted White (Au5 & Fractal Remix).mp3
+189:SoundCloud/Illuminor/Misplaced Me (Original Mix).mp3
+190:Artists/Infected Mushroom/Spitfire (Stonebank Remix).opus
+191:SoundCloud/Infected Mushroom/Spitfire (Stonebank Remix).mp3
+192:SoundCloud/Infected Mushroom & Bliss/Bliss on Mushrooms (feat. Miyavi).mp3
+193:SoundCloud/inktōme/polaris.mp3
+194:SoundCloud/Insan3Lik3/Feel Alive (Direct Remix).mp3
+195:SoundCloud/Insan3Lik3/Feel Alive (feat. Charlotte Haining).mp3
+196:SoundCloud/Insan3Lik3/Tastycat Event (26th October).mp3
+197:SoundCloud/Insan3Lik3/Tremble.mp3
+198:SoundCloud/Insan3Lik3 & Rob Gasser/Open Hour.mp3
+199:SoundCloud/INTERCOM/Decoy World VIP (feat. Park Avenue).mp3
+200:SoundCloud/INTERCOM/Decoy World (feat. Park Avenue).mp3
+201:SoundCloud/Ivory Rasmus/Ira (From Lord Bungs Confinement Series).mp3
+202:SoundCloud/I.Y.F.F.E, Au5 & Auratic/Sweet.mp3
+203:SoundCloud/Jay Cosmic & DESERT STAR/One Way Dream.mp3
+204:SoundCloud/Julian Calor/You Might Get Lost.mp3
+205:SoundCloud/Jweihaas/Let U Go.mp3
+206:SoundCloud/Kaidro/Unity.mp3
+207:SoundCloud/Karma Fields/Build The Cities (feat. Kerli) (Grabbitz Remix).mp3
+208:SoundCloud/Karma Fields/Edge of the World.mp3
+209:SoundCloud/Karma Fields/Skyline.mp3
+210:SoundCloud/Kasbo/Kaleidoscope.mp3
+211:SoundCloud/Kasbo/Again.mp3
+212:SoundCloud/Kisnou/New Descent.mp3
+213:SoundCloud/Koven/Gold.mp3
+214:SoundCloud/Koven/Love Wins Again.mp3
+215:SoundCloud/Koven/Numb.mp3
+216:SoundCloud/Koven/Another Home.mp3
+217:SoundCloud/Koven/All for Nothing.mp3
+218:SoundCloud/Koven/Shut My Mouth.mp3
+219:SoundCloud/Koven/Breathing Me In.mp3
+220:SoundCloud/Koven/Everything.mp3
+221:SoundCloud/Koven/Silence.mp3
+222:SoundCloud/Koven/Telling Me.mp3
+223:SoundCloud/Koven/Good Enough.mp3
+224:SoundCloud/Koven/From The Start.mp3
+225:Artists/Various Artists/Monstercat - 5 year Anniversary/Laszlo - Tribal.mp3
+226:SoundCloud/Laszlo/Law Of The Jungle.mp3
+227:SoundCloud/Laszlo/Closer.mp3
+228:SoundCloud/Laszlo/Sphere.mp3
+229:SoundCloud/Laszlo/Supernova.mp3
+230:SoundCloud/Laszlo/Home (feat. Richard Caddock).mp3
+231:SoundCloud/Laszlo x WRLD/You & Me.mp3
+232:SoundCloud/Lime/8bit Dreamer.mp3
+233:SoundCloud/Loosid/Talisman (feat. Raycee Jones & Lyon Hart).mp3
+234:SoundCloud/LVTHER/Dots (feat. Jenny Broke The Window).mp3
+235:SoundCloud/LVTHER/Time Well Spent (feat. Ayelle).mp3
+236:SoundCloud/Melano/Traveller.mp3
+237:SoundCloud/Mewnlight Rose/Willow.mp3
+238:SoundCloud/Mitchell Claxton/Koh Samui (feat. Angie Coombes).mp3
+239:SoundCloud/Mitchell Claxton/Wuxia.mp3
+240:SoundCloud/MitiS/Escapade (Original Mix).mp3
+241:SoundCloud/Moe Shop/Pastel (w.mp3
+242:SoundCloud/Monstercat/019 - Aspire Album Mix.mp3
+243:SoundCloud/Monstercat/019 - Venture Album Mix.mp3
+244:SoundCloud/Monstercat/020 - Altitude (Stratosphere Album Mix).mp3
+245:SoundCloud/Monstercat/021 - Perspective (Aspect Album Mix).mp3
+246:SoundCloud/Monstercat/022 - Contact (Essence Album Mix).mp3
+247:SoundCloud/Monstercat/023 - Voyage (Excursion Album Mix).mp3
+248:SoundCloud/Monstercat/026 - Resistance (Defiance Album Mix).mp3
+249:SoundCloud/Monstercat/027 - Cataclysm (Tribulations Album Mix).mp3
+250:SoundCloud/Mr FijiWiji/Insomnia.opus
+251:SoundCloud/Mr FijiWiji/Stop At Nothing.mp3
+252:SoundCloud/Mr FijiWiji/Growing Up (feat. Openwater).mp3
+253:SoundCloud/Mr FijiWiji/Cynical (feat. CoMa).mp3
+254:SoundCloud/Mr FijiWiji/Out on a Limb (feat. Jonny Rose).mp3
+255:SoundCloud/Mr FijiWiji & Direct/Entropy.mp3
+256:SoundCloud/Mr FijiWiji, Direct & Aruna/Time To Say Goodbye.mp3
+257:SoundCloud/Mr FijiWiji & Tülpa/Sentient.mp3
+258:SoundCloud/MrSuicideSheep/5 Million Subscriber Gaming Mix (by TheFatRat).mp3
+259:SoundCloud/MUZZ/Out There (feat. MVE).mp3
+260:SoundCloud/MUZZ/Catharsis (feat. Koven).mp3
+261:SoundCloud/Muzzy/Feeling Stronger (feat. Charlotte Colley) (High Maintenance Remix).mp3
+262:SoundCloud/Muzzy/Insignia.mp3
+263:SoundCloud/Muzzy/Calling Out (feat. KG & Skyelle).mp3
+264:SoundCloud/Muzzy/Break Away (feat. Priority One).mp3
+265:SoundCloud/Muzzy/Outsiders (feat. Charlotte Haining).mp3
+266:SoundCloud/Muzzy/In The Night (feat. Sullivan King).mp3
+267:SoundCloud/Muzzy/The Phantom (feat. High Maintenance).mp3
+268:SoundCloud/Muzzy & Droptek/Warhead.mp3
+269:SoundCloud/MYRNE & Popeska/Get It All (feat. Emily Hendrix).mp3
+270:SoundCloud/nanobii/Chipland.mp3
+271:SoundCloud/nanobii/Bubble Beam.mp3
+272:SoundCloud/nExow & Whithe/Hold On [Forgive EP].mp3
+273:SoundCloud/NiFEM/duty cycler.mp3
+274:SoundCloud/Nigel Good/Always Running (Feat. Sarah Clark).mp3
+275:SoundCloud/Nigel Good/An Adventure (feat. Davek).mp3
+276:SoundCloud/Nigel Good/This Is Forever.mp3
+277:SoundCloud/Nigel Good/No Way Back Up (feat. Illuminor).mp3
+278:SoundCloud/Nigel Good/Stellar.mp3
+279:SoundCloud/Nigel Good/Bastion.mp3
+280:SoundCloud/Nigel Good/Space Plus One.mp3
+281:SoundCloud/Nigel Good/Nova.mp3
+282:SoundCloud/Nigel Good/Cloudstepper.mp3
+283:SoundCloud/Nitro Fun/Easter Egg.mp3
+284:SoundCloud/Nitro Fun/Soldiers.mp3
+285:SoundCloud/Nitro Fun/So Far Away.mp3
+286:SoundCloud/Nitro Fun & Subtact/Come With Me (feat. Anna Yvette).mp3
+287:SoundCloud/Noisestorm/Surge (Drum & Bass Mix).mp3
+288:SoundCloud/Notaker/Just Close Your Eyes.mp3
+289:SoundCloud/Notaker/Wake Up, Youre Dreaming.mp3
+290:SoundCloud/Notaker/Terra.mp3
+291:SoundCloud/Notaker/Infinite.mp3
+292:SoundCloud/Notaker/Gems.mp3
+293:SoundCloud/Notaker/Shimmer.mp3
+294:SoundCloud/Notaker/The Storm.mp3
+295:SoundCloud/Notaker/From Dust & Ashes.mp3
+296:SoundCloud/Notaker/Into The Light (feat. Karra).mp3
+297:SoundCloud/Notaker/Melophonic.mp3
+298:SoundCloud/Notaker/The Longest Night.mp3
+299:SoundCloud/Notaker & Declan James/Who I Am (feat. Karra).mp3
+300:SoundCloud/Omni Trio/First Contact (Timecode Mix).mp3
+301:SoundCloud/Openwater & Matt Vice/No Regrets.mp3
+302:SoundCloud/Opiuo & Vorso/Apocalypse Honey.mp3
+303:SoundCloud/Opiuo & Vorso/Dusty Bugs.mp3
+304:SoundCloud/Opiuo & Vorso/Martian March.mp3
+305:SoundCloud/Opiuo & Vorso/Why Not.mp3
+306:SoundCloud/Pegboard Nerds/Hero ft. Elizaveta.mp3
+307:SoundCloud/Pegboard Nerds/Heaven Let Us Down (feat. Koda) [Non-Dubstep Edit].mp3
+308:SoundCloud/Pegboard Nerds/Speed Of Light (Andy C remix).mp3
+309:SoundCloud/Pegboard Nerds/Talk About It Ft. Desiree Dawson (Virtual Riot Remix).mp3
+310:SoundCloud/Pegboard Nerds/Just Like That (feat. Johnny Graves).mp3
+311:SoundCloud/Pegboard Nerds & Grabbitz/All Alone.mp3
+312:SoundCloud/Pierce Fulton & Puppet/Boy and the Beast.mp3
+313:SoundCloud/Pixel Terror/Arctica.mp3
+314:SoundCloud/Pixel Terror/Contra (feat. Sara Skinner).mp3
+315:SoundCloud/PIXL/Here For You (feat. Qaila).mp3
+316:SoundCloud/PIXL/Astrocat.mp3
+317:SoundCloud/PIXL/This Time.mp3
+318:SoundCloud/PIXL/Sadbot.mp3
+319:SoundCloud/Polaris/Empire.mp3
+320:SoundCloud/Popeska/Now Or Never.mp3
+321:SoundCloud/Porter Robinson/dullscythe (Skybreak Flip).mp3
+322:SoundCloud/Priority One & TwoThirds/Hunted (feat. Jonny Rose).mp3
+323:SoundCloud/Project 46/Limitless.mp3
+324:SoundCloud/Project 46/Slide.mp3
+325:SoundCloud/Project 46/Reasons (feat Andrew Allen).mp3
+326:SoundCloud/Project 46/Hasselhoff (Original Mix).mp3
+327:SoundCloud/Project 46/Motionless (feat. Seri).mp3
+328:SoundCloud/Protostar/New Horizons.mp3
+329:SoundCloud/Protostar/No Turning Back.mp3
+330:SoundCloud/Protostar/Galaxies.mp3
+331:SoundCloud/Protostar/Without You Feat. Megan Lenius.mp3
+332:SoundCloud/Protostar & Draper/Chrysalis.mp3
+333:SoundCloud/Protostar & MakO/No Fire (feat. Rachel Hirons).mp3
+334:SoundCloud/Puppet/Cargo.mp3
+335:SoundCloud/Puppet/Orange Against the Blue.mp3
+336:SoundCloud/Puppet/Scribble feat. The Eden Project (Extended Mix).mp3
+337:SoundCloud/Puppet/Scribble feat. The Eden Project (Murtagh Remix).mp3
+338:SoundCloud/Puppet/The Veldt.mp3
+339:SoundCloud/Puppet/To Be Alive (feat. Aaron Richards).mp3
+340:SoundCloud/Puppet/Chin Up (feat. Azuria Sky).mp3
+341:SoundCloud/Puppet/Soft Spoken.mp3
+342:SoundCloud/Puppet & Cormak/Enough Is Enough (feat. Richard Caddock).mp3
+343:SoundCloud/Puppet & Foria/Im Here.mp3
+344:SoundCloud/Puppet & Foria/Bigger Picture.mp3
+345:SoundCloud/Puppet & Murtagh/Killing Giants (feat. Richard Caddock).mp3
+346:SoundCloud/Puppet & The Eden Project/The Fire.mp3
+347:SoundCloud/PYLOT/Flashbacks.mp3
+348:SoundCloud/PYLOT/Blurred Vision.mp3
+349:SoundCloud/PYLOT/A Race Against Time.mp3
+350:SoundCloud/PYLOT/Locke.mp3
+351:SoundCloud/PYLOT/Shadowtask.mp3
+352:SoundCloud/Rameses B/Timeless (feat. Veela).mp3
+353:SoundCloud/Rameses B/Visionary (FREE).mp3
+354:SoundCloud/Rameses B/Visionary.mp3
+355:SoundCloud/Rameses B/Faster Than Light (feat. Danyka Nadeau).mp3
+356:SoundCloud/Rameses B/Neon Rainbow (feat. Anna Yvette).mp3
+357:SoundCloud/Rameses B/Virtuality.mp3
+358:SoundCloud/Reach/Forever.mp3
+359:SoundCloud/Rezonate/Lonely (feat. Bijou).mp3
+360:SoundCloud/Richard Caddock & Hyper Potions/Distance.mp3
+361:SoundCloud/Robert Miles/Children [Dream Version].mp3
+362:SoundCloud/Robert Miles/Fable.mp3
+363:Artists/Various Artists/Monstercat - 5 year Anniversary/Rogue - Imperfect Views.mp3
+364:SoundCloud/Rogue/From The Dust.mp3
+365:SoundCloud/Rootkit/Carry Me Away.mp3
+366:SoundCloud/Rootkit/Elevate.mp3
+367:SoundCloud/Rootkit/Oh You.mp3
+368:SoundCloud/Rootkit/Real Love (feat. Danyka Nadeau).mp3
+369:SoundCloud/Rootkit/Too Late (Original Mix).mp3
+370:Artists/Sabaton/Heroes/01 - Sabaton - Night Witches.mp3
+371:Artists/Sabaton/Heroes/02 - Sabaton - No Bullets Fly.mp3
+372:Artists/Sabaton/Heroes/03 - Sabaton - Smoking Snakes.mp3
+373:Artists/Sabaton/Heroes/04 - Sabaton - Inmate 4859.mp3
+374:Artists/Sabaton/Heroes/05 - Sabaton - To Hell And Back.mp3
+375:Artists/Sabaton/Heroes/06 - Sabaton - The Ballad Of Bull.mp3
+376:Artists/Sabaton/Heroes/07 - Sabaton - Resist And Bite.mp3
+377:Artists/Sabaton/Heroes/08 - Sabaton - Soldier Of 3 Armies.mp3
+378:Artists/Sabaton/Heroes/09 - Sabaton - Far From The Fame.mp3
+379:Artists/Sabaton/Heroes/10 - Sabaton - Hearts Of Iron.mp3
+380:Artists/Sabaton/Heroes/11 - Sabaton - 7734.mp3
+381:Artists/Sabaton/Heroes/12 - Sabaton - Man Of War.mp3
+382:Artists/Sabaton/Heroes/13 - Sabaton - For Whom The Bell Tolls.mp3
+383:Artists/Sabaton/Heroes/14 - Sabaton - En Hjältes Väg.mp3
+384:Artists/Sabaton/Heroes/15 - Sabaton - Out Of Control.mp3
+385:Artists/Sabaton/The Art of War/01 - Sabaton - Panzerkampf.mp3
+386:Artists/Sabaton/The Art of War/02 - Sabaton - Ghost Division.mp3
+387:Artists/Sabaton/The Art of War/03 - Sabaton - The Art Of War.mp3
+388:Artists/Sabaton/The Art of War/04 - Sabaton - 401.mp3
+389:Artists/Sabaton/The Art of War/05 - Sabaton - Unbreakable.mp3
+390:Artists/Sabaton/The Art of War/06 - Sabaton - Cliffs Of Gallipoli.mp3
+391:Artists/Sabaton/The Art of War/07 - Sabaton - Talvisota.mp3
+392:Artists/Sabaton/The Art of War/08 - Sabaton - Union (Slopes Of St Benedict).mp3
+393:Artists/Sabaton/The Art of War/09 - Sabaton - The Price Of A Mile.mp3
+394:Artists/Sabaton/The Art of War/10 - Sabaton - Firestorm.mp3
+395:SoundCloud/Said The Sky & Illenium/Painted White feat. Cristina Soto (Au5 & Fractal Remix).mp3
+396:SoundCloud/Savoy/How U Like Me Now (feat. Roniit).mp3
+397:SoundCloud/Savoy/Let You Let Me.mp3
+398:SoundCloud/Savoy/Your Time (feat. KIELY).mp3
+399:Artists/Seven Lions & Kill The Noise/Cold Hearted.opus
+400:SoundCloud/Similar Outskirts/Choreography.mp3
+401:SoundCloud/Similar Outskirts/Cosmonaut.mp3
+402:SoundCloud/Similar Outskirts/Roller Coaster.mp3
+403:SoundCloud/Singto Conley/Swarmlake (Original Game Soundtrack) [feat. Jameson Hodge].mp3
+404:SoundCloud/Singto Conley/Under The Stars (Instrumental Remix).mp3
+405:SoundCloud/Slander & Said The Sky/Potions feat. JT Roach(Au5 Remix).mp3
+406:SoundCloud/Slippy/Restless (feat. Anna Yvette).mp3
+407:SoundCloud/slushii/Sapient Dream (Original Mix).mp3
+408:SoundCloud/Slyder/Neo (The One).mp3
+409:SoundCloud/Smalltown Boy/Bronski Beat - The Age Of Consent.mp3
+410:SoundCloud/Snavs/Lust.mp3
+411:SoundCloud/Soba/Utopia.mp3
+412:SoundCloud/Sons and Lovers/Lover (Rogue Remix).mp3
+413:SoundCloud/Soulero/Aura.mp3
+414:SoundCloud/Soulero/Seconds Away ft. QAILA.mp3
+415:SoundCloud/Soupandreas/Melatonin.mp3
+416:SoundCloud/Stephen Walking/Shark City.mp3
+417:Artists/Stonebank/Be Alright (feat. EMEL) (Au5 Remix).opus
+418:Artists/Various Artists/Monstercat - 5 year Anniversary/Stonebank - Lift You Up (feat. EMEL).mp3
+419:SoundCloud/Stonebank/Be Alright (feat. EMEL) [Au5 Remix].mp3
+420:SoundCloud/Stonebank/Blast from the Past.mp3
+421:SoundCloud/Stonebank/Chokehold (feat. Concept).mp3
+422:SoundCloud/Stonebank/Eagle Eyes (feat. EMEL).mp3
+423:SoundCloud/Stonebank/Placebo.mp3
+424:SoundCloud/Stonebank/Ready.mp3
+425:SoundCloud/Stonebank/Ripped To Pieces (Feat. EMEL).mp3
+426:SoundCloud/Stonebank/The Pressure.mp3
+427:SoundCloud/Synthion/Twinkle.mp3
+428:SoundCloud/T.A.T.u/Not Gonna Get Us (LoadedFist remix).mp3
+429:Artists/Teminite/State Of Mind.mp3
+430:SoundCloud/Teriac/Nocturne.mp3
+431:SoundCloud/The Crystal Method feat. The Heavy/Play For Real (Dirtyphonics Remix).mp3
+432:SoundCloud/The Legend Of Zelda/Great Fairy Fountain (Chime Remix).mp3
+433:Artists/Various Artists/Monstercat - 5 year Anniversary/Tristam - Before We Fade.mp3
+434:SoundCloud/Tristam/Bone Dry.mp3
+435:SoundCloud/Tristam/Crave.mp3
+436:SoundCloud/Tristam/Devotion.mp3
+437:SoundCloud/Tristam & Braken/Far Away.mp3
+438:SoundCloud/Tristam & Braken/Frame of Mind.mp3
+439:SoundCloud/Trivecta/Drift Away (feat. Charlotte Haining).mp3
+440:SoundCloud/Trivecta/The Vale (feat. Miyoki).mp3
+441:SoundCloud/Tut Tut Child/Fell Down (feat. Holly Drummond).mp3
+442:SoundCloud/Tut Tut Child/If I Could (feat. Beth Cole).mp3
+443:SoundCloud/Tut Tut Child/Queen Of Your Heart (feat. Augustus Ghost).mp3
+444:SoundCloud/TVDS/Bumblebee.mp3
+445:SoundCloud/TwoThirds/Breathe.mp3
+446:SoundCloud/TwoThirds/Bring it Back.mp3
+447:SoundCloud/TwoThirds/Origami.mp3
+448:SoundCloud/TwoThirds/Universal.mp3
+449:SoundCloud/Ujico/Cosmo Funk.mp3
+450:MIDIs/CGP Gray - Airplane boarding music.mid
+451:SoundCloud/Crazy As You.mp3
+452:SoundCloud/Unlike Pluto/Everything Black (feat. Mike Taylor).mp3
+453:SoundCloud/Varien/My Prayers Have Become Ghosts.mp3
+454:SoundCloud/Varien/The Scarlet Dawn.mp3
+455:SoundCloud/Varien/Valkyrie (feat. Laura Brehm).mp3
+456:SoundCloud/Varien/Valkyrie II - Lacuna (feat. Cassandra Kay).mp3
+457:SoundCloud/Varien/Valkyrie III - Atonement (feat. Laura Brehm).mp3
+458:SoundCloud/Varien & 7 Minutes Dead/Mirai Sekai (Continuous Mix).mp3
+459:SoundCloud/Virtual Riot & Autodrive/Nightmare Ft. Splitbreed (Zuko Remix).mp3
+460:SoundCloud/Volant/The Return.mp3
+461:SoundCloud/Volant/Volcast.mp3
+462:SoundCloud/VOLANT/「 HYPERTRANCE 」𝑒𝑡𝑒𝑟𝑛𝑎𝑙.𝒔𝒑𝒓𝒊𝒏𝒈.mp3
+463:SoundCloud/Vorso/Vorso — All Torque.mp3
+464:SoundCloud/Vorso/Vorso — Bad Fuel.mp3
+465:SoundCloud/Vorso/Vorso — SFX.mp3
+466:SoundCloud/Vorso/Vorso — Stronk.mp3
+467:SoundCloud/William Fitzsimmons/The Tide Pulls from the Moon (JacM Chillstep Remix).mp3
+468:SoundCloud/WRLD/Awake (feat. Colordrive).mp3
+469:SoundCloud/WRLD/By Design.mp3
+470:SoundCloud/WRLD/Discovery.mp3
+471:SoundCloud/WRLD/Fighter.mp3
+472:SoundCloud/WRLD/Orbit (feat. Richard Caddock).mp3
+473:SoundCloud/WRLD/WRLD.mp3
+474:SoundCloud/Xander Lewis/Leaf Quilt.mp3
+475:SoundCloud/Xanwow (Xan Griffin)/Spectral Exclusive.mp3.mp3
+476:SoundCloud/X-Wise/Everything(Original Mix).mp3
+477:SoundCloud/Yelle/A Cause Des Garcons (Riot In Belgium Remix).mp3
+478:SoundCloud/Yttrium/Inspire.mp3
+479:SoundCloud/Zac Waters/A Lot Like You.mp3
+playlist_end
