@@ -3,6 +3,9 @@ set -m
 
 #wpg -m
 
+# Start Waybar FIRST
+#waybar &
+
 # Notification manager
 mako &
 

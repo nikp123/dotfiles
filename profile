@@ -100,3 +100,10 @@ export CC=clang
 export RUSTUP_HOME=$HOME/.local/share/rustup
 export CARGO_HOME=$HOME/.local/share/cargo
 export RUSTC_WRAPPER=$HOME/.local/share/cargo/bin/sccache
+
+# Load SSH garbage in
+eval $(ssh-agent) &> /dev/null
+
+# Fix yet another fucking GTK issue
+export GTK_USE_PORTAL=0
+

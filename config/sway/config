@@ -11,30 +11,30 @@ smart_borders off
 default_border pixel
 titlebar_border_thickness 0
 xwayland on
-for_window [title="."] floating enable
+#for_window [title="."] floating enable
 
 # tile the usual thingies
-for_window [app_id="firefox"] floating disable
-for_window [app_id="firefox" title="\nOpening"] floating enable
-for_window [app_id="foot"] floating disable
-for_window [app_id="ario"] floating disable
-for_window [app_id="qemu"] floating disable
-for_window [app_id="org.gnome.Nautilus"] floating disable
-for_window [app_id="org.gnome.Nautilus" title=""] floating enable
-for_window [instance="spotify"] floating disable
-for_window [instance="element"] floating disable
+#for_window [app_id="firefox"] floating disable
+#for_window [app_id="firefox" title="\nOpening"] floating enable
+#for_window [app_id="foot"] floating disable
+#for_window [app_id="ario"] floating disable
+#for_window [app_id="qemu"] floating disable
+#for_window [app_id="org.gnome.Nautilus"] floating disable
+#for_window [app_id="org.gnome.Nautilus" title=""] floating enable
+#for_window [instance="spotify"] floating disable
+#for_window [instance="element"] floating disable
 
 # Microphone, Screensharing, Video indicator
 for_window [title="Firefox - Sharing Indicator"] floating enable, sticky enable
 
-#for_window [class="^.*"] border pixel 3
-#for_window [title="XAVA"] floating enable
-#for_window [title="XAVA"] border none
-#for_window [title="Brightness control"] floating enable
-#for_window [title="WineDesktop*"] floating enable
-#for_window [title="Select file"] floating enable
-#for_window [title="KDE Connect Indicator"] floating enable
-#for_window [title="anbox"] floating enable
+for_window [class="^.*"] border pixel 3
+for_window [title="XAVA"] floating enable
+for_window [title="XAVA"] border none
+for_window [title="Brightness control"] floating enable
+for_window [title="WineDesktop*"] floating enable
+for_window [title="Select file"] floating enable
+for_window [title="KDE Connect Indicator"] floating enable
+for_window [title="anbox"] floating enable
 
 ### Variables
 #
@@ -375,7 +375,7 @@ client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #900000 #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-font pango:Terminus (TTF) 12
+font pango:Terminus (TTF) 9
 
 # Set gap sizes
 gaps inner 0
@@ -414,11 +414,10 @@ gaps outer 0
 #	icon_theme "Numix Circle"
 #}
 
-# Teh bar
-exec waybar
-
 # Autostart programs
 exec ~/.config/sway/scripts/onetime-services
+
+exec waybar
 
 # Viber is buggy as fuck
 #exec ~/.config/autostart-scripts/viber

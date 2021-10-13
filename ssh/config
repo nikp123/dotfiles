@@ -2,3 +2,8 @@ Host aur4.archlinux.org aur.archlinux.org
     User aur
     IdentitiesOnly yes
     IdentityFile ~/.ssh/id_rsa
+Host homeserver
+    User nikp123
+    Port 22000
+    IdentityFile ~/.ssh/id_rsa
+
