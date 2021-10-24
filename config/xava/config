@@ -1,10 +1,11 @@
+
 ## Configuration file for XAVA. Default values are commented out. Use either ';' or '#' for commenting.
 
 
 [general]
 
 # Accepts only non-negative values.
-; framerate = 60
+;  framerate = 30
 
 # Keep the application in sync with the monitor to prevent tearing
 # It's generally recommended to keep it on, as different framerates may lead to unstable frametimes
@@ -26,8 +27,11 @@
 ; width = 1180
 ; height = 300
 
+; width = 800
+; height = 800
+
 # Fullscreen toggle
- fullscreen = true
+ fullscreen = false
 
 # Enables or disables window borders
 ; border = false
@@ -49,7 +53,7 @@
 # FXP. if alignment is set to right and x_padding is 20,
 # it will move the window left 20 pixels and so on for every direction
 ; x_padding = 0
- y_padding = 11
+ y_padding = 21
 
 # This option removes the ability to interact with the window
 ; interactable = true
@@ -139,12 +143,12 @@
 # The pre renderer is responsible for shading the visualizer BEFORE
 # the bars are drawn, this allows the shader developer to adjust the
 # way that the bars are drawn on the screen
-; pre_shaderpack = default
+ pre_shaderpack = default
 
 # Meanwhile the post rendering/shading is responsible for adjusting the
 # look of the visualizer AFTER the bars have been drawn (fxp. adding
 # shadows via depth buffer trickery)
- post_shaderpack = kinetic
+ post_shaderpack = shadow
 
 # Scale the resolution of the rendered visualizer by a floating-point factor
 # Works similarly to "render resolution scalers" in modern AAA game engines
@@ -176,7 +180,7 @@
 ; source = auto
 
 ; method = alsa
-; source = hw:Loopback,1
+; source = default
 
 ; method = sndio
 ; source =
@@ -190,8 +194,13 @@
 ; method = wasapi
 ; source = loopback
 
+ method = pipewire
+ source = default
+
 # Adjusts the input buffer size (in samples, calculated by 2^input_size)
 ; size = 12
+
+samplerate = 192000
 
 
 [output]
@@ -203,12 +212,14 @@
 # 'glx' is for a X11 window using OpenGL
 # 'win' is for a WIN32 window using OpenGL
 # 'wayland' is for a Wayland surface (ZWLR or XDG)
+; method = sdl2_osciloscope
  method = wayland
+; method = wayland
 
 # Visual channels. Can be 'stereo' or 'mono'.
 # 'stereo' mirrors both channels with low frequencies in center.
 # 'mono' averages both channels and outputs left to right lowest to highest frequencies.
-; channels = mono
+ channels = mono
 
 
 [color]
@@ -222,28 +233,18 @@
  foreground = white
 
 # This adjusts the opacity of the bars (must have transparency and OpenGL in order for it to work)
-; foreground_opacity = 1.0
+ foreground_opacity = 1.0
 
 # And this does the same but for the background (previous rule applies here as well)
- background_opacity = 0.8
+ background_opacity = 0.0
 
 # Gradient mode, only hex defined colors are supported, background must also be defined in hex
 # or remain commented out.
 # To enable gradients, just change gradient_count to the number of colors you have specified
 # (0 = disabled)
-; gradient_count = 0
-; gradient_color_1 = '#0099ff'
-; gradient_color_2 = '#ff3399'
-
-
-[shadow]
-
-# Fake shadow effect (works with transparency only)
-# To disable shadows, set size to 0
-; size = 7
-
-# Color format is #aarrggbb
-; color = "#ff000000"
+ gradient_count = 0
+ gradient_color_1 = '#0099ff'
+ gradient_color_2 = '#ff3399'
 
 
 [stars]
@@ -296,7 +297,7 @@ monstercat = 0.0
 ; log = 1.55
 
 # Average out the value of each ~~odd~~ even bar (just like the monstercat visualizer)
-; oddoneout = true
+; oddoneout = false
 
 # Balances the eq towards higher or lower frequencies
 # lower value->lower frequencies, higher value->higher frequencies

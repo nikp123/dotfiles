@@ -1,0 +1,209 @@
+{
+    //"layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    //"gtk-layer-shell": true,
+     "height": 13, // Waybar height (to be removed for auto height)
+    // "width": 1920, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    //"modules-center": ["sway/window"],
+    "modules-center": [],
+    "modules-right": ["memory", "cpu", "temperature", "battery",
+        "clock", "idle_inhibitor", "tray"],
+    // Modules configuration
+    // "sway/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "",
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // },
+
+    //"sway/mode": {
+    //    "format": "<span style=\"italic\">{}</span>"
+    //},
+
+    //"custom/musicstat": {
+    //    "format": "{}",
+    //    //"format-alt": "{alt}: {}",
+    //    //"format-alt-click": "click-left",
+    //    "exec": "/usr/local/bin/xms_current_song",
+    //    "restart-interval": 1,
+	//	"interval": 1,
+    //    "on-click": "mpc --host thisisaverysecurepassword@localhost toggle",
+    //    "on-click-right": "ario",
+    //},
+
+    //"mpd": {
+    //    "server": "thisisaverysecurepassword@localhost",
+    //    "port": 6600,
+    //    "tooltip": true,
+    //    "tooltip-format": "Album: {album}\nQueue: {songPosition}/{queueLength}\nTime: {elapsedTime:%H:%M:%S}/{totalTime:%H:%M:%S}",
+    //    "on-click": "mpc --host thisisaverysecurepassword@localhost toggle",
+    //    "on-click-right": "ario",
+    //    "on-scroll-up": "mpc --host thisisaverysecurepassword@localhost seek +5",
+    //    "on-scroll-down": "mpc --host thisisaverysecurepassword@localhost seek -5",
+    //    //"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+    //    "format": "{stateIcon} {artist} - {title}",
+//  //      "format-disconnected": "Disconnected ",
+//  //      "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    //    "format-disconnected": "",
+    //    "format-stopped": "",
+    //    "unknown-tag": "N/A",
+    //    "interval": 2,
+    //    "max-length": 60,
+    //    "consume-icons": {
+    //        "on": " "
+    //    },
+    //    "random-icons": {
+    //        "on": "<span color=\"#f53c3c\"></span> ",
+    //        "off": " "
+    //    },
+    //    "repeat-icons": {
+    //        "on": " "
+    //    },
+    //    "single-icons": {
+    //        "on": "1 "
+    //    },
+    //    "state-icons": {
+    //        "paused": "",
+    //        "playing": ""
+    //    }
+    //},
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 0
+    },
+
+    "clock": {
+        "timezone": "Europe/Sarajevo",
+        "format": "{:%H:%M %Z}",
+        "format-alt": "{:%a, %b %d %C%y}",
+        "tooltip": false,
+        "on-click-right": "gsimplecal"
+    },
+
+    "cpu": {
+        "format": "{usage}% ",
+        "interval": 1,
+        "on-click": "foot bash -ci htop --sort-key PERCENT_CPU"
+    },
+
+    "memory": {
+        "format": "{}% ",
+        "interval": 1,
+        "on-click": "foot bash -ci htop --sort-key PERCENT_MEM"
+    },
+
+    "temperature": {
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/devices/virtual/thermal/thermal_zone0/temp",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
+    },
+
+    "battery": {
+        "tooltip": true,
+        "states": {
+            "good": 95,
+            "warning": 20,
+            "critical": 15
+        },
+        "format": "{capacity}% ({time}) {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        "format-full": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+
+    "network": {
+        "interface": "wlo1", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        //"format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "foot nmtui",
+        "on-click-right": "~/.config/sway/scripts/wireless-toggle",
+        //"format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+    //"custom/vpn":{
+    //    "format": "wg0 {icon}",
+    //    "tooltip-format": "{icon}",
+    //    "exec": "~/.config/waybar/modules/vpn",
+    //    "return-type": "json",
+    //    "interval": 5,
+    //    "format-icons": ["",""]
+    //},
+
+    "pulseaudio": {
+        "tooltip": false,
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}%",
+        "format-bluetooth": "{volume}% {icon}{format_source}",
+        "format-bluetooth-muted": " {icon}{format_source}",
+        "format-muted": "{format_source}",
+        //"format-source": "{volume}% ",
+        "format-source": "",
+        "format-source-muted": " ",
+        //"format-icons": {
+        //    "headphone": "",
+        //    "hands-free": "",
+        //    "headset": "",
+        //    "phone": "",
+        //    "portable": "",
+        //    "car": "",
+        //    "default": ["", "", ""]
+        //},
+        "on-click-right": "pavucontrol",
+        "on-click-middle": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+
+    "sway/language" : {
+        "format": "{}",
+         "max-lenght": 50,
+         "min-lenght": 2,
+         "tooltip": true
+    },
+
+    //"custom/weather": {
+    //    "format": "{}",
+    //    //"format-alt": "{alt}: {}",
+    //    //"format-alt-click": "click-left",
+    //    "interval": 7200,
+    //    "return-type": "json",
+    //    "exec": "curl -s 'https://wttr.in/?format=1' |jq --unbuffered --compact-output -M -R '{text:.}'",
+    //    "exec-if": "ping wttr.in -c1",
+    //    "on-click-right": "foot --fullscreen ~/.config/scripts/weather"
+    //    // "on-click-right": "alacritty -e bash -ci ~/bin/wttr"
+    //}
+}

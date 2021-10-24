@@ -24,6 +24,7 @@ export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
 #export XAUTHORITY="$XDG_CAHCE_HOME"/Xauthority
 export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
 export LESSHISTFILE="$XDG_CONFIG_HOME"/less/history
+export ELINKS_CONFDIR="$XDG_CONFIG_HOME"/elinks
 
 # Completions
 #if [ -f /usr/lib/python3.7/site-packages/habitica/shell_completion.sh ]; then

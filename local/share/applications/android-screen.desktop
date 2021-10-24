@@ -1,8 +1,8 @@
 [Desktop Entry]
 Type=Application
-Name=ADB screen
+Name=Android screen
 Comment=Share the display of an android device connected through ADB
-Exec=scrcpy
+Exec=/home/nikp123/Projects/git/tools/scrcpy-desktop/startscreen.sh
 Icon=android-studio
 Terminal=false
 Categories=Development;
