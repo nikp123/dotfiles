@@ -1,0 +1,17 @@
+#!/bin/python
+
+import os
+import subprocess
+
+file_list = os.environ['NAUTILUS_SCRIPT_SELECTED_FILE_PATHS'].split('\n')
+
+# Appends files from env var to list
+for i in file_list:
+    convert_cmd = ["convert"]
+    convert_cmd += [i]
+    temp_string = os.path.splitext(i)[0]+'.jpg'
+    jpeg_path = ""
+    convert_cmd += [jpeg_path.join(temp_string)]
+    print(convert_cmd)
+    subprocess.run(convert_cmd)
+
