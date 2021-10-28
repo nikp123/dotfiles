@@ -414,13 +414,10 @@ gaps outer 0
 #	icon_theme "Numix Circle"
 #}
 
+# Buggy garbage courtesy of GNOME (once again)
+include /etc/sway/config.d/*
+
 # Autostart programs
 exec ~/.config/sway/scripts/onetime-services
 
 exec waybar
-
-# Viber is buggy as fuck
-#exec ~/.config/autostart-scripts/viber
-#exec ~/.config/i3/scripts/assassin Viber
-
-include /etc/sway/config.d/*
