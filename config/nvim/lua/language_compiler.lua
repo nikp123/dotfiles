@@ -1,0 +1,15 @@
+
+-- map helper
+--local function map(mode, lhs, rhs, opts)
+--  local options = {noremap = true}
+--  if opts then options = vim.tbl_extend('force', options, opts) end
+--  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+--end
+--
+--if vim.bo.filetype == "zig" then
+--  map("n", "<F5>", ":split | terminal zig run % <CR>")
+--end
+--
+--vim.cmd([[
+--  map <F2> :echo 'Current time is ' . strftime('%c')<CR>
+--]])

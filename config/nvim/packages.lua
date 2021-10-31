@@ -1,24 +1,30 @@
-use { "https://github.com/rktjmp/lush.nvim" }
-use { "https://github.com/npxbr/gruvbox.nvim" }
+-- Language server processor
 use { "https://github.com/neovim/nvim-lspconfig" }
-use { "https://github.com/kabouzeid/nvim-lspinstall" }
-use { "https://github.com/nvim-lua/popup.nvim" }
-use { "https://github.com/nvim-lua/plenary.nvim" }
-use { "https://github.com/nvim-telescope/telescope.nvim" }
-use { "https://github.com/nvim-lua/completion-nvim" }
+
+-- Language server installer
+use { "https://github.com/williamboman/nvim-lsp-installer" }
+
+-- Language server syntax parser
+use { "https://github.com/nvim-treesitter/nvim-treesitter" }
+
+-- Language server auto-complete engine
+use { "https://github.com/hrsh7th/nvim-cmp" }
+use { "https://github.com/hrsh7th/cmp-nvim-lsp" }
+use { "https://github.com/hrsh7th/cmp-buffer" }
+use { "https://github.com/hrsh7th/cmp-path" }
+use { "https://github.com/hrsh7th/cmp-cmdline" }
+
+-- Snippet engine
+use { "https://github.com/dcampos/nvim-snippy" }
+use { "https://github.com/dcampos/cmp-snippy" }
+use { "https://github.com/hrsh7th/cmp-vsnip" }
 use { "https://github.com/hrsh7th/vim-vsnip" }
 use { "https://github.com/hrsh7th/vim-vsnip-integ" }
-use { "https://github.com/folke/which-key.nvim" }
-use { "https://github.com/kyazdani42/nvim-web-devicons" }
-use { "https://github.com/lewis6991/gitsigns.nvim" }
-use { "https://github.com/b3nj5m1n/kommentary" }
-use { "https://github.com/windwp/nvim-autopairs" }
-use { "https://github.com/nvim-treesitter/nvim-treesitter" }
-use { "https://github.com/p00f/nvim-ts-rainbow" }
-use { "https://github.com/numToStr/Navigator.nvim" }
-use { "https://github.com/numtostr/FTerm.nvim" }
-use { "https://github.com/folke/zen-mode.nvim" }
-use { "https://github.com/folke/twilight.nvim" }
-use { "https://github.com/windwp/nvim-projectconfig" }
-use { "https://github.com/instant-markdown/vim-instant-markdown" }
-use { "https://github.com/simrat39/rust-tools.nvim"}
+
+--use { "https://github.com/ms-jpq/coq_nvim" }
+--use { "https://github.com/ms-jpq/coq.thirdparty" }
+--use { "https://github.com/ms-jpq/coq.artifacts" }
+
+
+-- use { "https://github.com/tpope/vim-dispatch" }
+
