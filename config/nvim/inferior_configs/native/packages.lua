@@ -21,6 +21,12 @@ use { "https://github.com/hrsh7th/cmp-vsnip" }
 use { "https://github.com/hrsh7th/vim-vsnip" }
 use { "https://github.com/hrsh7th/vim-vsnip-integ" }
 
+-- Provides runners
+use { "https://github.com/sbdchd/vim-run" }
+
+-- Provides zig compiler commands
+use { "https://github.com/ziglang/zig.vim" }
+
 --use { "https://github.com/ms-jpq/coq_nvim" }
 --use { "https://github.com/ms-jpq/coq.thirdparty" }
 --use { "https://github.com/ms-jpq/coq.artifacts" }

@@ -32,7 +32,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Terminus (TTF)";
+    font-family: "Source Code Pro";
     font-size: 14px;
     min-height: 0;
     opacity: 1.0;
@@ -138,7 +138,7 @@ window#waybar.chromium {
 #language {
     padding: 0 10px;
     margin: 0 4px;
-    min-width: 14px;
+    min-width: 20px;
     background-color: @bg-color-3;
     color: @fg-color;
 }

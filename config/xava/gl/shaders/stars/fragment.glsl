@@ -20,8 +20,6 @@ vec4 append_color_properly(vec4 source, vec4 target) {
 }
 
 void main() {
-	vec4 depth = texture(depth_texture, texCoord);
-
 	// test if infinite
 	FragColor = background_color;
 	FragColor = append_color_properly(

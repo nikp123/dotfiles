@@ -5,6 +5,8 @@
 [global]
     ### Display ###
 
+    layer = overlay
+
     monitor = 0
     follow = mouse
 
@@ -24,7 +26,8 @@
     idle_threshold = 120
 
     ### Text ###
-    font = Terminus (TTF) 12
+    #font = Terminus (TTF) 12
+    font = Source Code Pro 12
     line_height = 0
 
     markup = full
@@ -60,8 +63,8 @@
 
     ### Misc/Advanced ###
     dmenu = /usr/bin/rofi -show run -p dunst:
-    browser = /usr/bin/chromium
-    always_run_script = false
+    browser = /usr/bin/xdg-open
+    always_run_script = true
     title = Dunst
     class = Dunst
     startup_notification = false
@@ -77,18 +80,18 @@
     history = ctrl+period
 
 [urgency_low]
-    background = colors.background
-    foreground = colors.foreground
-    timeout = 0
+#    background = colors.background
+#    foreground = colors.foreground
+    timeout = 2
 
 [urgency_normal]
-    background = colors.background
-    foreground = colors.foreground
-    timeout = 0
+#    background = colors.background
+#    foreground = colors.foreground
+    timeout = 5
 
 [urgency_critical]
-    background = colors.background
-    foreground = colors.foreground
+#    background = colors.background
+#    foreground = colors.foreground
     frame_color = "#efefef"
     timeout = 0
 

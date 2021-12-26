@@ -5,7 +5,7 @@
 [general]
 
 # Accepts only non-negative values.
-;  framerate = 30
+; framerate = 30
 
 # Keep the application in sync with the monitor to prevent tearing
 # It's generally recommended to keep it on, as different framerates may lead to unstable frametimes
@@ -16,7 +16,7 @@
 
 # The number of bars. 0 sets it to auto (put as many as you can).
 # Bars' width and space between bars in number of pixels on screen.
-; bars = 0
+ bars = 63
 ; bar_width = 13
 ; bar_spacing = 5
 
@@ -24,20 +24,20 @@
 [window]
 
 # Window width and height
-; width = 1180
-; height = 300
+ width = 1180
+ height = 300
 
-; width = 800
+; width  = 800
 ; height = 800
 
 # Fullscreen toggle
- fullscreen = false
+ fullscreen = true
 
 # Enables or disables window borders
-; border = false
+ border = true
 
 # Window transparency toggle (your system must support transparent windows)
-; transparency = true
+ transparency = true
 
 # Keeps the window under any other
 ; keep_below = true
@@ -53,7 +53,8 @@
 # FXP. if alignment is set to right and x_padding is 20,
 # it will move the window left 20 pixels and so on for every direction
 ; x_padding = 0
- y_padding = 21
+; y_padding = 21
+y_padding = 23
 
 # This option removes the ability to interact with the window
 ; interactable = true
@@ -71,13 +72,13 @@
 
 # Draw directly on the root window (or wallpaper) itself
 # You need to stop any form of compositing for this to even work properly
- root_window = true
+ root_window = false
 
 # Sets the override any redirection by the host WM, that is the window cannot change
 # the it's order in the window stack
 # This option also disables any form of interaction with the window - same as when:
 #    interacable = false
-; override_redirect = false
+ override_redirect = true
 
 # This allows XAVA to restart when the display settings are changed
 # As this can cause constant reloading (https://github.com/nikp123/xava/issues/20)
@@ -92,6 +93,22 @@
 # monitor (if that makes sense :\)
  monitor_name = eDP1
 
+
+[cairo]
+; module_1 = kinetic
+; module_2 = stars
+; module_3 = media_info
+; module_4 = bars
+
+; module_1 = stars
+; module_2 = media_info
+; module_3 = bars
+
+ module_1 = media_info
+ module_2 = bars
+
+; module_2 = media_info
+; module_1 = stars
 
 [wayland]
 
@@ -119,40 +136,27 @@
 #
 # Also in XDG, XAVA may crash when resizing the window due to buffer
 # related issues (If this bothers you, an issue or PR would be appreciated)
-; background_layer = true
+ background_layer = true
 
 # When background_layer is enabled, this options offers you to select
 # which monitor XAVA should occupy (examples: eDP-1, HDMI-A-1...)
 #
 # Specifying an invalid monitor would cause XAVA to fall back onto the
 # last monitor available
-; monitor_name = 0
+ monitor_name = HDMI-A-1
 
 
 [gl]
 
 # Hacks and options related to the '*_gl' and '*_egl' output modes
-
-# XAVA's OpenGL and EGL renderers are split into two rendering pipelines:
-# the "pre" and "post" rendering, that's why there are two shaders
-
-# The following options allow for users to change their visualizer via
-# different "shaderpacks" which work just the same as they do on
-# Minecraft Optifine
-
-# The pre renderer is responsible for shading the visualizer BEFORE
-# the bars are drawn, this allows the shader developer to adjust the
-# way that the bars are drawn on the screen
- pre_shaderpack = default
-
-# Meanwhile the post rendering/shading is responsible for adjusting the
-# look of the visualizer AFTER the bars have been drawn (fxp. adding
-# shadows via depth buffer trickery)
- post_shaderpack = shadow
+ post_shader = shadow
 
 # Scale the resolution of the rendered visualizer by a floating-point factor
 # Works similarly to "render resolution scalers" in modern AAA game engines
-; resolution_scale = 1.0
+ resolution_scale = 1.0
+
+ module = bars
+; module = bars_circle
 
 
 [input]
@@ -173,8 +177,8 @@
 # to capture from an input device, such as a microphone
 #
 # You can also specify 'list' as the source to portaudio to list all available audio devices
-; method = pulseaudio
-; source = auto
+ method = pulseaudio
+ source = auto
 
 ; method = portaudio
 ; source = auto
@@ -194,8 +198,8 @@
 ; method = wasapi
 ; source = loopback
 
- method = pipewire
- source = default
+; method = pipewire
+; source = default
 
 # Adjusts the input buffer size (in samples, calculated by 2^input_size)
 ; size = 12
@@ -212,9 +216,7 @@ samplerate = 192000
 # 'glx' is for a X11 window using OpenGL
 # 'win' is for a WIN32 window using OpenGL
 # 'wayland' is for a Wayland surface (ZWLR or XDG)
-; method = sdl2_osciloscope
- method = wayland
-; method = wayland
+ method = cairo
 
 # Visual channels. Can be 'stereo' or 'mono'.
 # 'stereo' mirrors both channels with low frequencies in center.
@@ -245,21 +247,6 @@ samplerate = 192000
  gradient_count = 0
  gradient_color_1 = '#0099ff'
  gradient_color_2 = '#ff3399'
-
-
-[stars]
-
-# For stars to work, you need a speical output mode that supports it
-# One such mode is "x11_stars"
-
-# Controls the number of stars on screen
-; count = 100
-
-# Controls how reactive the stars are to changess in sound (exponential)
-; sensitivity = 1.2
-
-# Linearly multiples the resulting star velocity
-; velocity = 1.0
 
 
 [filter]

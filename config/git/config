@@ -4,8 +4,7 @@
 [color]
 	ui = auto
 [core]
-	editor = vim
-	excludesfile = /home/nikp123/.gitignore
+	editor = nvim
 [credential]
 	helper = !pass-git-helper $@
 	useHttpPath = true

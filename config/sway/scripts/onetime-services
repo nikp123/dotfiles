@@ -7,7 +7,8 @@ set -m
 #waybar &
 
 # Notification manager
-mako &
+#mako &
+dunst &
 
 # Policy manager
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -35,7 +36,10 @@ foot -s &
 nextcloud --background &
 
 # Music
-mpd &
+if pgrep mpd &> /dev/null; then
+    mpd &
+    mpDris2 &
+fi
 
 # Mah visualizer
 #xava &
@@ -43,13 +47,10 @@ mpd &
 # VM audio
 scream -p 4010 -u &
 
-# Monitor
-# kanshi &
-
 # Turn off monitor when idle
 swayidle -w \
-    timeout 600 'swaymsg "output HDMI-1 dpms off"' \
-    resume 'swaymsg "output HDMI-1 dpms on"' \
+    timeout 600 'swaymsg "output \* dpms off"' \
+    resume 'swaymsg "output \* dpms on"' \
     lock '~/.config/sway/scripts/lock' \
     after-resume 'loginctl lock-session' &
 

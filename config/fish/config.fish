@@ -64,9 +64,9 @@ if [ -f $HOME/.config/fish/localaliases.fish ]
 end
 
 # Load keyring
-if test -n "$DESKTOP_SESSION"
-    set (gnome-keyring-daemon --start | string split "=")
-end
+#if test -n "$DESKTOP_SESSION"
+#    set (gnome-keyring-daemon --start | string split "=")
+#end
 
 # Fix DEL key in st
 tput smkx

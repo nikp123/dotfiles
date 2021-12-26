@@ -1,0 +1,11 @@
+#!/bin/bash
+inputfile="$1"
+outputfile="output-$1"
+#workdir=/tmp/anda-pdf-convert
+
+for i in $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS; do
+	cp $i $i.old
+	recode windows-1254..UTF-8 $i 
+done
+
+#find . -name '*srt' -exec bash -c "cp '{}' '{}.new';recode windows-1254..UTF-8 '{}.new'" \;

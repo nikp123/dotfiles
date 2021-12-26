@@ -22,10 +22,13 @@ font pango:Terminus (TTF) 12
 # More appearance settings
 default_border pixel 3
 default_floating_border pixel 3
+for_window [title="Microsoft Teams Notification"] floating enable
 for_window [class=".*"] border pixel 3
 for_window [class="XAVA"] floating enable
 for_window [class="origin.exe"] floating enable
 for_window [title="Brightness control"] floating enable
+for_window [title="Steam - News.*"] kill
+for_window [title="Friends List" class="Steam"] kill
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -67,15 +70,18 @@ bindsym XF86AudioMicMute           exec pamixer --default-source --toggle-mute &
 #bindsym XF86AudioPlay   exec adb shell input keyevent 85
 #bindsym $mod+p          exec adb shell input keyevent 85
 
-# Many secure. Much wow.
-bindsym XF86AudioPlay   exec mpc --host "thisisaverysecurepassword@localhost" toggle
-bindsym XF86AudioPrev   exec mpc --host "thisisaverysecurepassword@localhost" prev
-bindsym XF86AudioNext   exec mpc --host "thisisaverysecurepassword@localhost" next
-bindsym $mod+p          exec mpc --host "thisisaverysecurepassword@localhost" toggle
-bindsym $mod+Shift+u    exec mpc --host "thisisaverysecurepassword@localhost" prev
-bindsym $mod+Shift+i    exec mpc --host "thisisaverysecurepassword@localhost" next
-bindsym $mod+u          exec mpc --host "thisisaverysecurepassword@localhost" seek -10
-bindsym $mod+i          exec mpc --host "thisisaverysecurepassword@localhost" seek +10
+bindsym XF86AudioPlay   exec ~/.config/scripts/playerctl play-pause
+bindsym XF86AudioPrev   exec ~/.config/scripts/playerctl previous
+bindsym XF86AudioNext   exec ~/.config/scripts/playerctl next
+bindsym $mod+p          exec ~/.config/scripts/playerctl play-pause
+bindsym $mod+Shift+u    exec ~/.config/scripts/playerctl previous
+bindsym $mod+Shift+i    exec ~/.config/scripts/playerctl next
+bindsym $mod+u          exec ~/.config/scripts/playerctl position 10-
+bindsym $mod+i          exec ~/.config/scripts/playerctl position 10+
+
+bindsym --release Print exec maim -g \"$(slop)" | xclip -selection clipboard -t image/png
+
+bindsym $mod+slash exec ~/.config/sway/scripts/notification_history
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -96,6 +102,11 @@ bindsym $mod+m exec $pdf
 # brightness control
 bindsym $mod+Shift+g exec brightnessctl
 
+# Screen brightness controls
+bindsym XF86MonBrightnessUp     exec light -T 1.1 && light -G | cut -d'.' -f1 > $I3SOCK.xob;
+bindsym XF86MonBrightnessDown   exec light -T 0.9 && light -G | cut -d'.' -f1 > $I3SOCK.xob;
+bindsym XF86Display             exec light -G|grep 0.00 && light -I || (light -O; light -S 0)
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -113,9 +124,9 @@ bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
+bindsym $mod+Left  focus left
+bindsym $mod+Down  focus down
+bindsym $mod+Up    focus up
 bindsym $mod+Right focus right
 
 # move focused window

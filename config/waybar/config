@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     //"modules-center": ["sway/window"],
-    "modules-center": ["mpd"],
+    "modules-center": [],
     "modules-right": ["memory", "cpu", "temperature", "battery", "network",
         "custom/weather", "sway/language", "clock", "idle_inhibitor", "tray"],
     // Modules configuration
@@ -43,7 +43,7 @@
     },
 
     "mpd": {
-        "server": "thisisaverysecurepassword@localhost",
+        "server": "localhost",
         "port": 6600,
         "tooltip": true,
         "tooltip-format": "Album: {album}\nQueue: {songPosition}/{queueLength}\nTime: {elapsedTime:%H:%M:%S}/{totalTime:%H:%M:%S}",
@@ -190,8 +190,6 @@
 
     "sway/language" : {
         "format": "{}",
-         "max-lenght": 50,
-         "min-lenght": 2,
          "tooltip": true
     },
 

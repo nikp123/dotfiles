@@ -10,9 +10,9 @@ configuration {
 	yoffset: 0;
 	xoffset: 0;
 	fixed-num-lines: true;
-	terminal: "footclient";
+	terminal: "alacritty";
 	ssh-client: "ssh-hacky-bullshit-with-rofi";
-	ssh-command: "{terminal} {ssh-client} {host}";
+	ssh-command: "{terminal} -e {ssh-client} {host}";
 	run-command: "{cmd}";
 	case-sensitive: false;
 	parse-hosts: true;

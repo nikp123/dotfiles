@@ -4,6 +4,7 @@
 # Set recoloring colors
 set recolor_darkcolor #BDE090
 set recolor_lightcolor #000000
+set recolor-keephue true
 
 # Set double page view so that it accounts for the title cover
 set first-page-column 1:2

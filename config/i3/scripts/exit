@@ -11,15 +11,15 @@ case $result in
 		i3-msg exit
 		;;
 	"hibernate")
-		xdg-screensaver lock
+		dm-tool lock
 		systemctl hibernate
 		;;
 	"sleep")
-		xdg-screensaver lock
+		dm-tool lock
 		systemctl suspend
 		;;
 	"lock")
-		xdg-screensaver lock
+		dm-tool lock
 		;;
 esac
 

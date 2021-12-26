@@ -1,9 +1,11 @@
 #!/bin/sh
 set -m
 
-feh --bg-fill /home/nikp123/Pictures/Wallpaper/i_actually_use/hd/autumn_orange_forestry.jpg
+# Ser wallpaper
+#feh --bg-fill /home/nikp123/Pictures/Wallpaper/i_actually_use/hd/autumn_orange_forestry.jpg
+nitrogen --set-zoom-fill ~/Pictures/Wallpaper/desktop_hd/alena-aenami-stay-1k.jpg
 
-#wpg -m 
+#wpg -m
 
 # Policy manager
 lxpolkit &
@@ -28,7 +30,10 @@ tail -f $I3SOCK.xob | xob &
 nextcloud --background &
 
 # Music
-mpd &
+if pgrep mpd &> /dev/null; then
+    mpd &
+    mpDris2 &
+fi
 
 # Mah visualizer
 xava &
@@ -54,7 +59,16 @@ autorandr --change &
 # Apparently Xresources doesnt load when started by "startx"
 xrdb ~/.Xresources &
 
-xmodmap -e "clear lock" &
-xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock" &
-xmodmap -e "keycode 66 = Escape NoSymbol Escape" &
+# Restore JACK server
+#ray-daemon --session "Visualizer music" &
+
+# Bar
+#excalibar &
+
+# Key remapping. THESE NEED TO RUN IN ORDER.
+#xmodmap -e "clear lock"
+##xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock" &
+#xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+xmodmap -e "remove lock = Caps_Lock"
+xmodmap -e "keycode 66 = Escape"
 
