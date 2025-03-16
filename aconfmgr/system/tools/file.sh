@@ -1,0 +1,2 @@
+AddPackage ncdu
+AddPackage tree

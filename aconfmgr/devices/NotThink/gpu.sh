@@ -1,0 +1,1 @@
+AddPackage libva-intel-driver

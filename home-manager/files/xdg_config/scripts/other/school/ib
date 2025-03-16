@@ -1,0 +1,14 @@
+#!/bin/bash
+list="$(find ~/Documents/School/FTN/ -type f -name "*.pdf" -o -name "*.epub"|grep Materijal|tr ' ' _)"
+result="$(find ~/Documents/School/FTN/ -type f -name "*.pdf" -o -name "*.epub"|grep Materijal|rev|cut -d'/' -f1|rev|rofi -dmenu -i)"
+
+for i in $list; do
+	i="$(echo $i|tr _ ' ')"
+	comparison="$(echo $i|rev|cut -d'/' -f1|rev)"
+	if [[ "$comparison" == "$result" ]]; then
+		#evince "$i"
+		zathura "$i"
+		break;
+	fi
+done
+

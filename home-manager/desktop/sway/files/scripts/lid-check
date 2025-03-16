@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+
+#result=$(cat /proc/acpi/button/lid/LID/state|grep open)
+
+result=$(cat /sys/class/power_supply/AC/online)
+
+if [ "$1" = "closed" ]; then
+    echo "closed"
+    if [ "$result" = "0" ]; then
+        echo "sleeping"
+        systemctl hybrid-sleep
+    else
+        swaymsg output eDP-1 disable
+    fi
+elif [ "$1" = "open" ]; then
+    echo "open"
+    swaymsg "output * dpms on"
+    swaymsg output eDP-1 enable
+fi
+
+

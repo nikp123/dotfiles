@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+swaymsg="$(swaymsg -t get_outputs -r)"
+
+numOfModes=$(echo $swaymsg|jq -r '.[0].modes | length')
+
+modes=''
+
+widths="$(echo $swaymsg|jq -r '.[0].modes[].width')"
+IFS=$'\n' widths=($widths)
+IFS=$' '
+heights="$(echo $swaymsg|jq -r '.[0].modes[].height')"
+IFS=$'\n' heights=($heights)
+IFS=$' '
+
+sum=''
+
+for (( i=0; i<numOfModes; i++ )); do
+	modes[$i]=$(echo ${widths[$i]}x${heights[$i]})
+	if [ ${modes[$i]} = ${modes[((i-1))]} ]; then
+		continue
+	fi
+	sum+="${modes[$i]}\n"
+done
+
+
+swaymsg output $(echo $swaymsg|jq -r '.[0].name') mode $(printf $sum | rofi -dmenu -i)
+

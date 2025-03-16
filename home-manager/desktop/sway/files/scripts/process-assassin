@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+while ! swaymsg -t get_tree | grep $1; do
+	sleep 0.1
+done
+
+swaymsg [class="$1"] kill

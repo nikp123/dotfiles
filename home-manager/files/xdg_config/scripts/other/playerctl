@@ -1,0 +1,27 @@
+#!/bin/sh
+playerctl --player=spotify $1 $2 $3 $4 $5
+if [ $? -eq 0 ]; then
+	exit 0
+fi
+
+playerctl --player=Spotube $1 $2 $3 $4 $5
+if [ $? -eq 0 ]; then
+	exit 0
+fi
+
+playerctl --player=mpd $1 $2 $3 $4 $5
+if [ $? -eq 0 ]; then
+	exit 0
+fi
+
+playerctl --player=firefox $1 $2 $3 $4 $5
+if [ $? -eq 0 ]; then
+	exit 0
+fi
+
+playerctl --player=chromium $1 $2 $3 $4 $5
+if [ $? -eq 0 ]; then
+	exit 0
+fi
+
+exit 1

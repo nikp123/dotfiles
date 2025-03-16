@@ -1,0 +1,4 @@
+#!/bin/sh
+pamixer --get-volume | tr -d '\n'
+pamixer --get-mute &> /dev/null && echo -n "!"
+printf "\n"

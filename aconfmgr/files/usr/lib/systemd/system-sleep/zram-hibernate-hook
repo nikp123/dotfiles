@@ -1,0 +1,58 @@
+#!/usr/bin/env sh
+when=$1
+event=$2
+
+if [[ "$event" =~ ^("hibernate"|"hybrid-sleep"|"suspend-then-hibernate")$ ]]; then
+	echo "event matched"
+
+	case "$when" in
+		"pre")
+			# Unmount zram if it's mounted
+			disks=$(/usr/bin/swapon -s | tail -n +2 | cut -d' ' -f1)
+			for i in $disks; do
+			  if [ "$i" == "/dev/zram0" ]; then
+			    /usr/bin/swapoff /dev/zram0
+			    /usr/bin/rmmod -f zram
+			  fi
+			done
+			
+			# Mount physical swap if its missing
+			found=0
+			disks=$(/usr/bin/swapon -s | tail -n +2 | cut -d' ' -f1)
+			for i in $disks; do
+			  label=$(/usr/bin/lsblk -o LABEL $i -r | tail -n +2)
+			  if [ "HIBERNATE" == "$label" ]; then
+			    found=1
+			    break
+			  fi
+			done
+			
+			if [ $found -ne 1 ]; then
+			  /usr/bin/swapon -L HIBERNATE
+			fi
+			;;
+		"post")
+			# Unmount physical swap partition if it's mounted
+			disks=$(/usr/bin/swapon -s | tail -n +2 | cut -d' ' -f1)
+			for i in $disks; do
+			  label=$(/usr/bin/lsblk -o LABEL $i -r | tail -n +2)
+			  if [ "HIBERNATE" == "$label" ]; then
+			    /usr/bin/swapoff -L "HIBERNATE" 2> /dev/null
+			  fi
+			done
+			
+			# Create zram if its missing
+			check_zram=$(/usr/bin/swapon -s|/usr/bin/grep /dev/zram0)
+			if [ $? -ne 0 ]; then
+			  /usr/bin/modprobe zram
+			  echo zstd > /sys/block/zram0/comp_algorithm
+			  echo 4G > /sys/block/zram0/disksize
+			  /usr/bin/mkswap --label zram0 /dev/zram0
+			  /usr/bin/swapon --priority 100 /dev/zram0
+			fi
+			;;
+		*)
+			echo "invalid operation"
+			;;
+	esac
+fi

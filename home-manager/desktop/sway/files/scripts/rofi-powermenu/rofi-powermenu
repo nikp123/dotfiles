@@ -1,0 +1,40 @@
+#!/usr/bin/env sh
+
+LOCATION="$HOME/.config/sway/scripts/rofi-powermenu/"
+
+rofi="rofi -theme $LOCATION/powermenu.rasi"
+
+shutdown=""
+reboot=""
+lock=""
+hibernate=""
+suspend=""
+logout=""
+
+options="$lock\n$suspend\n$logout\n$hibernate\n$reboot\n$shutdown"
+
+case "$(echo -e "$options" | $rofi -dmenu -selected-row 0)" in
+  $shutdown)
+    systemctl poweroff
+    ;;
+  $reboot)
+    systemctl reboot
+    ;;
+  $hibernate)
+    systemctl hibernate
+    ;;
+  $lock)
+    loginctl lock-session
+    ;;
+  $suspend)
+    systemctl suspend-then-hibernate
+    if [ $? -ne 0 ]; then
+      # if the system doenst support hybridsleep then dont
+      systemctl suspend
+    fi
+    ;;
+  $logout)
+    #hyprctl dispatch exit
+    swaymsg exit
+    ;;
+esac

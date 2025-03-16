@@ -1,0 +1,10 @@
+#!/bin/sh
+# Update displays
+autorandr --change
+
+# Update wallpaper
+nitrogen --set-zoom-fill ~/Pictures/Wallpaper/desktop_hd/alena-aenami-stay-1k.jpg
+
+# Fix keyboard (because fucking X11)
+setxkbmap -layout us,hr,rs,de -option caps:escape_shifted_capslock -option grp:alt_shift_toggle
+

@@ -1,0 +1,31 @@
+#!/bin/sh
+result=$(echo -e "lock\nsleep\nhibernate\nlogoff\nreboot\npoweroff" | rofi -dmenu)
+case $result in
+	"poweroff")
+		poweroff
+		;;
+	"reboot")
+		reboot
+		;;
+	"windows")
+		systemctl reboot --boot-loader-entry=windows.conf
+		;;
+	"macOS")
+		systemctl reboot --boot-loader-entry=macos.conf
+		;;
+	"logoff")
+		i3-msg exit
+		;;
+	"hibernate")
+		dm-tool lock
+		systemctl hibernate
+		;;
+	"sleep")
+		dm-tool lock
+		systemctl suspend
+		;;
+	"lock")
+		dm-tool lock
+		;;
+esac
+

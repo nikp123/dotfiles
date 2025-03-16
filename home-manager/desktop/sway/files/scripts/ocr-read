@@ -1,0 +1,35 @@
+#!/usr/bin/env sh
+
+TEMP_IMAGE=/tmp/temp_ocr_image.png
+TEMP_TEXT=/tmp/temp_ocr_text
+
+ocr_lang=$(echo -e "eng\ndeu\nsrp" | rofi -dmenu)
+
+# Don't try on empty input
+if [ -z "$ocr_lang" ]; then
+	exit -1
+fi
+
+# Convert OCR language into appropriate commandline args
+case $ocr_lang in
+	"eng")
+		speech_cmd="festival --tts $TEMP_TEXT.txt"
+		;;
+	"deu")
+		speech_cmd="espeak -v de -g 3 -s 140 -f $TEMP_TEXT.txt"
+		;;
+	"srp")
+		speech_cmd="espeak -v mb-cr1 -g 3 -s 140 -f $TEMP_TEXT.txt"
+		;;
+esac
+
+grim -g "$(slurp)" - > $TEMP_IMAGE
+
+tesseract -l $ocr_lang $TEMP_IMAGE $TEMP_TEXT
+
+$speech_cmd
+
+rm $TEMP_IMAGE $TEMP_TEXT.txt
+
+notify-send "Reading completed" -t 2000
+

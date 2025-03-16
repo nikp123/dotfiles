@@ -1,0 +1,33 @@
+#!/bin/sh
+
+if [ "$#" -lt 1 ]; then
+   exit
+fi
+
+if [ "$1" = "mute" ]; then
+   pactl set-source-mute @DEFAULT_SOURCE@ toggle
+else
+   pactl set-source-volume @DEFAULT_SOURCE@ $1
+fi
+
+volume=$(pactl get-source-volume @DEFAULT_SOURCE@ | awk -F/ '{print $2}' | tr -d ' %')
+muted=$(pactl get-source-mute @DEFAULT_SOURCE@ | cut -d' ' -f2)
+mute_str=""
+icon_name=""
+
+if [ "$muted" = "yes" ]; then
+  mute_str=" (Muted)"
+  icon_name="audio-input-microphone-muted-symbolic"
+else
+  if [ $volume -eq 0 ]; then
+    icon_name="audio-input-microphone-low-zero"
+  elif [ $volume -lt 26 ]; then
+    icon_name="audio-input-microphone-low-symbolic"
+  elif [ $volume -lt 51 ]; then
+    icon_name="audio-input-microphone-medium-symbolic"
+  else
+    icon_name="audio-input-microphone-high-symbolic"
+  fi
+fi
+
+notify-send -t 10000 -e -r 6 -a volume -u low -i "$icon_name" -h int:value:$volume "Volume ${volume}%${mute_str}"

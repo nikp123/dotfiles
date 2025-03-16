@@ -1,0 +1,90 @@
+@import "colours/catppuccin-macchiato.css";
+
+window#waybar {
+    background-color: @base;
+    color: @text;
+}
+window#waybar.hidden {
+    opacity: 0.2;
+}
+window#waybar > box {
+}
+
+.spacer {
+    margin-right: 0.25rem;
+}
+
+button {
+    border: none;
+    border-radius: 0;
+}
+button:hover {
+    background: inherit;
+}
+
+#workspaces {
+    /** background-color: @surface0; **/
+}
+#workspaces button {
+    color: @text;
+}
+/** #workspaces button:not(:last-child) {
+    margin-right: 0.25rem;
+} **/
+#workspaces button:hover {
+    background-color: @surface1;
+    border-radius: 9999px;
+}
+#workspaces button.focused, #workspaces button.active {
+    background-color: @surface0;
+    border-radius: 9999px;
+    color: @mauve;
+    font-weight: bold;
+}
+#workspaces button.urgent {
+    color: @peach;
+    font-weight: bold;
+}
+
+.modules-right label:not(.spacer), #tray {
+    background-color: @surface0;
+    padding: 0.25rem 0.7rem;
+}
+
+#custom-notification, #tray {
+   margin: 0 0 0 1rem;
+}
+
+.modules-right > :first-child label, #custom-notification, #tray {
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+}
+#clock, #custom-notification, #tray {
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+}
+#clock      {
+    color: @lavender;
+}
+#battery    { color: @blue; }
+#pulseaudio { color: @teal; }
+#pulseaudio.out.muted { color: @peach; }
+#pulseaudio.in.source-muted { color: @peach; }
+#idle_inhibitor.activated { color: @green; }
+
+#custom-notification.notification,
+#custom-notification.dnd-notification {
+    color: @peach;
+}
+
+#battery.critical:not(.charging) {
+    color: @peach;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @peach;
+}

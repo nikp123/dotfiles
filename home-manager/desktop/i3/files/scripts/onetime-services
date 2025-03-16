@@ -1,0 +1,76 @@
+#!/bin/sh
+set -m
+
+#
+# System daemons and settings
+#
+
+# Key remapping. THESE NEED TO RUN IN ORDER.
+#xmodmap -e "remove lock = Caps_Lock"
+#xmodmap -e "keycode 66 = Escape"
+
+# Policy manager
+lxpolkit &
+
+# Manages the "everything bar"
+#mkfifo $I3SOCK.xob-vol
+#mkfifo $I3SOCK.xob-mic
+#mkfifo $I3SOCK.xob-bright
+#
+#tail -f $I3SOCK.xob-vol    | xob -c ~/.config/xob.cfg -s i3-vol &
+#tail -f $I3SOCK.xob-mic    | xob -c ~/.config/xob.cfg -s i3-mic &
+#tail -f $I3SOCK.xob-bright | xob -c ~/.config/xob.cfg -s i3-bright &
+
+# why not
+#activate-linux &
+
+# Compositor
+#picom &
+
+# Notification manager
+#dunst &
+
+# Detect when shit changes
+~/.config/i3/scripts/monitor_notify ~/.config/i3/scripts/monitor_update &
+
+# Apparently Xresources doesnt load when started by "startx"
+xrdb ~/.Xresources &
+
+#
+# Applications and services
+#
+
+# Delay (if needed)
+#sleep 1
+
+#/usr/lib/kdeconnectd &
+#kdeconnect-indicator &
+
+# Nextcloud file sync
+#nextcloud --background &
+
+# NetworkManager applet
+nm-applet &
+
+# VM audio
+#scream -p 4010 -u &
+
+## Music
+#if pgrep mpd &> /dev/null; then
+#    echo "MPD is alive and well, don't start it"
+#else
+#    #mpd &
+#    #mpDris2 &
+#fi
+
+# Mah visualizer
+# xava &
+
+# Restore JACK server
+#ray-daemon --session "Visualizer music" &
+
+# Bar
+#excalibar &
+
+# Power management
+mate-power-manager &

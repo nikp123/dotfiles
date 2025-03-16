@@ -1,0 +1,149 @@
+#!/usr/bin/env -S tcc -run
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+
+#include <X11/X.h>
+#include <X11/Xlib.h>
+#include <X11/extensions/Xrandr.h>
+
+#include <unistd.h>
+
+static XEvent xEvent;
+static Display *XDisplay;
+static Screen *XScreen;
+static Window XRoot;
+
+static Bool xavaSupportsRR;
+static int xavaRREventBase;
+
+static int XScreenNumber;
+
+int init_window_x(void) {
+	// connect to the X server
+	XDisplay = XOpenDisplay(NULL);
+	if(XDisplay == NULL) {
+		fprintf(stderr, "cannot open X display\n");
+		return 1;
+	}
+
+	XScreen = DefaultScreenOfDisplay(XDisplay);
+	XScreenNumber = DefaultScreen(XDisplay);
+	XRoot = RootWindow(XDisplay, XScreenNumber);
+
+	XStoreName(XDisplay, XRoot, "Dumb wallpaper fixer 9000");
+	XSelectInput(XDisplay, XRoot, RRScreenChangeNotifyMask | VisibilityChangeMask | StructureNotifyMask | ExposureMask | KeyPressMask | KeymapNotify);
+
+	// query for the RR extension in X11
+	int error;
+	xavaSupportsRR = XRRQueryExtension(XDisplay, &xavaRREventBase, &error);
+	if(xavaSupportsRR) {
+		int rr_major, rr_minor;
+
+		if(XRRQueryVersion(XDisplay, &rr_major, &rr_minor)) {
+			int rr_mask = RRScreenChangeNotifyMask;
+			if(rr_major == 1 && rr_minor <= 1) {
+				rr_mask &= ~(RRCrtcChangeNotifyMask |
+					RROutputChangeNotifyMask |
+					RROutputPropertyNotifyMask);
+			}
+
+			// listen for display configure events only if enabled
+			XRRSelectInput(XDisplay, XRoot, rr_mask);
+		}
+	}
+	return 0;
+}
+
+void draw_graphical_x(void) {
+	XSync(XDisplay, 0);
+	return;
+}
+
+void cleanup_graphical_x(void) {
+	// make sure that all events are dead by this point
+	XSync(XDisplay, 1);
+
+	XCloseDisplay(XDisplay);
+	return;
+}
+
+#ifdef __linux__
+char old_lid[128];
+
+// VALUE MUST BE A STATIC 128-byte string
+void get_lid_state__linux(char *value) {
+	FILE *fp = fopen("/proc/acpi/button/lid/LID/state", "rb");
+	if(fp == NULL) { // system has no lid or doesn't ACPI :(
+		value[0] = '\0'; // empty string means error
+		return;
+	}
+
+	int err = fscanf(fp, "state:      %127s", value);
+	fclose(fp);
+
+	if(err != 1) {
+		value[0] = '\0'; // empty string means error
+		return;
+	}
+}
+
+bool lid_check__linux(void) {
+	char result[128];
+	get_lid_state__linux(result);
+
+	if(!strcmp(old_lid, result))
+		return false;
+
+	strcpy(old_lid, result);
+	return true;
+}
+#endif
+
+void fire_command(int argc, char *argv[]) {
+	size_t cmdLength = 0;
+	cmdLength += argc;
+	for(int i = 1; i<argc; i++) {
+		cmdLength += strlen(argv[i]);
+	}
+
+	char *command = malloc(cmdLength);
+	if(command == NULL) {
+		printf("download mor WAM pls");
+		exit(EXIT_FAILURE);
+	}
+
+	strcpy(command, argv[1]);
+	for(int i = 2; i<argc; i++) {
+		strcat(command, " ");
+		strcat(command, argv[i]);
+	}
+
+	system(command);
+
+	free(command);
+}
+
+int main(int argc, char *argv[]) {
+	init_window_x();
+	while(1) {
+		if(!XPending(XDisplay)) {
+			#ifdef __linux__
+				if(lid_check__linux())
+					fire_command(argc, argv);
+			#endif
+			usleep(1000000); // wait 1 second
+			continue;
+		}
+		XNextEvent(XDisplay, &xEvent);
+		if(xEvent.type == xavaRREventBase + RRScreenChangeNotify) {
+			fire_command(argc, argv);
+		}
+		draw_graphical_x();
+	}
+
+	// this is never run, lol
+	cleanup_graphical_x();
+	return 0;
+}

@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+# prevent conflicts
+killall kanshi
+
+# swayidle doesnt detect controller input so this is a "good-enough" solution
+killall swayidle
+
+# use kanshi to handle potential monitor configs
+kanshi gaming &
+
+# wait a bit so everything applies properly
+sleep 1
+
+# kanshi gtfo
+killall kanshi
+
+# pick desired display resolution (because certain games have to be certain)
+~/.config/sway/scripts/monitor_config
+

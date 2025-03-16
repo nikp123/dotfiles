@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+TEMP_IMAGE=/tmp/temp_ocr_image.png
+TEMP_TEXT=/tmp/temp_ocr_text
+
+result=$(echo -e "eng\ndeu\nsrp" | rofi -dmenu)
+
+# Don't try on empty input
+if [ -z "$result" ]; then
+	exit -1
+fi
+
+grim -g "$(slurp)" - > $TEMP_IMAGE
+
+tesseract -l $result $TEMP_IMAGE $TEMP_TEXT
+
+cat $TEMP_TEXT.txt | wl-copy 
+
+rm $TEMP_IMAGE $TEMP_TEXT.txt
+
+/usr/local/bin/done &
+
+notify-send "OCR completed" -t 2000
+

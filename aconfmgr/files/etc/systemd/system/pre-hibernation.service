@@ -1,0 +1,13 @@
+[Unit]
+Before=systemd-hibernate.service
+Before=hibernate.target
+Before=sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/systemd/system-sleep/zram-hibernate-hook pre hibernate
+
+[Install]
+RequiredBy=hibernate.target
+RequiredBy=sleep.target
+RequiredBy=systemd-hibernate.service

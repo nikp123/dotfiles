@@ -1,0 +1,22 @@
+#
+# Float every window by default config
+#
+#for_window [title=".*"] floating enable
+for_window [app_id="firefox"] floating disable
+
+# Kill Firefox sharing indicator. It opens as an own container. Does not kill functionality
+for_window [title = "Firefox - Sharing Indicator"] kill
+for_window [title = "Firefox — Sharing Indicator"] kill
+# Does something firefox, i'm not sure
+for_window [app_id="firefox" title="Library"] floating enable, border pixel 1, sticky enable
+
+# Float a nmtui terminal by default
+for_window [title="nmtui"] floating enable
+
+# Waybar Tooltips don't steel focus
+no_focus [app_id="waybar"]
+for_window [app_id="waybar" floating] {
+    move position cursor
+    move down 60px # adjust if some menus still don't fit
+}
+

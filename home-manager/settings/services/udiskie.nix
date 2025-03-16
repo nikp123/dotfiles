@@ -1,0 +1,4 @@
+{
+  automount = false;
+  notify = true;
+}
