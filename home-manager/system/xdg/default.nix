@@ -13,9 +13,4 @@
     # Literally too much of a hassle to deal with
     mimeApps.enable = false;
   };
-
-  # Absolutely necessary for desktop icon shenanigans
-  home.sessionVariables = {
-    XDG_DATA_DIRS = "${config.xdg.stateHome}/nix/profile/share:/usr/share";
-  };
 }
