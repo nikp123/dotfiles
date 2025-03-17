@@ -8,7 +8,7 @@
 
   home.sessionVariables = {
     # Filthy hack, I love it.
-    "SSH_AUTH_SOCK"     = "$XDG_RUNTIME_DIR/keyring/ssh";
+    "SSH_AUTH_SOCK"     = "$XDG_RUNTIME_DIR/gcr/ssh";
 
     # Android
     "ANDROID_USER_HOME" = "${config.xdg.dataHome}/android";

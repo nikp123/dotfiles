@@ -1,5 +1,7 @@
-{ ... }: {
+{ pkgs, ... }: {
   nix = {
+    package = pkgs.nix;
+
     # Save some disk space
     settings.auto-optimise-store = true;
 

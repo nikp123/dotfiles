@@ -6,6 +6,7 @@ source ./system/general/nix.sh
 source ./system/general/no-touchies.sh
 source ./system/general/pacman.sh
 source ./system/general/secure-boot.sh
+source ./system/general/security.sh
 source ./system/general/shell.sh
 source ./system/general/systemd.sh
 source ./system/general/users.sh

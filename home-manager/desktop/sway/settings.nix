@@ -134,13 +134,6 @@ in {
       followMouse  = true; # breaks bitwarden, breaks my brain as well, turn it back!
       mouseWarping = true;  # wrap mouse
     };
-
-    startup = [
-      # unfuck gnome-keyring on nixOS
-      #{ command = "configure-gtk"; }
-      #{ command = "${pkgs.gnome.gnome-keyring}/bin/gnome-keyring-daemon --replace -d --components=pkcs11,secrets,ssh"; }
-      #{ command = "lxsession"; }
-    ];
   };
   extraConfigEarly = ''
     exec ${pkgs.xorg.xhost}/bin/xhost +

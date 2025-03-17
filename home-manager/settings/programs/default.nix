@@ -4,7 +4,6 @@
     ./fish.nix
     ./gnupg.nix
     ./matlab.nix
-    ./nix.nix
     ./octave.nix
     ./ssh.nix
     ./rofi.nix

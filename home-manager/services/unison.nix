@@ -106,7 +106,7 @@ in {
       CPUSchedulingPolicy = "idle";
       Environment         = [
         "UNISON=${unison_store}"
-        "SSH_AUTH_SOCK=/run/user/1000/keyring/ssh"
+        "SSH_AUTH_SOCK=/run/user/1000/gcr/ssh"
       ];
     };
   };

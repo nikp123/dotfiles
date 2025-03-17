@@ -1,6 +1,5 @@
 AddPackage accountsservice
 AddPackage colord
-AddPackage gnome-keyring
 AddPackage gstreamer
 AddPackage gst-plugins-base-libs
 AddPackage gvfs
@@ -14,4 +13,3 @@ IgnorePath /etc/light
 IgnorePath /var/lib/AccountsService
 IgnorePath /var/lib/colord
 
-CreateLink /etc/systemd/user/sockets.target.wants/gnome-keyring-daemon.socket /usr/lib/systemd/user/gnome-keyring-daemon.socket

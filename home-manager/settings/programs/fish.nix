@@ -6,7 +6,7 @@
     #  "sudo\ vim" = "sudovim";
     #};
     interactiveShellInit = ''
-      set SSH_AUTH_SOCK "/run/user/$(id -u)/keyring/ssh"
+      set SSH_AUTH_SOCK "/run/user/$(id -u)/gcr/ssh"
     '';
     shellInit = ''
       # Unfuck XDG paths for containers

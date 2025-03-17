@@ -7,7 +7,7 @@
     ./system/gtk
     # Is the order that fucks with this?
     system/font/default.nix
-    #./system/nix
+    ./system/nix
     ./system/qt
     ./system/xdg
     ./system/theme/arc-dark.nix

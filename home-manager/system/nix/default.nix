@@ -1,5 +1,11 @@
-{ ... }: {
+{ pkgs, ... }: {
+  home.packages = with pkgs; [
+    nixos-install-tools
+    nixos-rebuild
+  ];
+
   imports = [
-    ./optimizations.nix
+    ./allow-unfree.nix
+    #./optimizations.nix
   ];
 }
