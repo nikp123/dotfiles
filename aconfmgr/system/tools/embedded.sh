@@ -1,0 +1,1 @@
+AddPackage aml-flash-tool

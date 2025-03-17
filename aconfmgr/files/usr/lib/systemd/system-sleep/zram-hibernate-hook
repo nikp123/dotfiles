@@ -8,13 +8,10 @@ if [[ "$event" =~ ^("hibernate"|"hybrid-sleep"|"suspend-then-hibernate")$ ]]; th
 	case "$when" in
 		"pre")
 			# Unmount zram if it's mounted
-			disks=$(/usr/bin/swapon -s | tail -n +2 | cut -d' ' -f1)
-			for i in $disks; do
-			  if [ "$i" == "/dev/zram0" ]; then
-			    /usr/bin/swapoff /dev/zram0
-			    /usr/bin/rmmod -f zram
-			  fi
-			done
+			/usr/bin/swapoff /dev/zram0
+			sleep 1
+			/usr/bin/rmmod -f zram
+			sleep 1
 			
 			# Mount physical swap if its missing
 			found=0
@@ -42,14 +39,11 @@ if [[ "$event" =~ ^("hibernate"|"hybrid-sleep"|"suspend-then-hibernate")$ ]]; th
 			done
 			
 			# Create zram if its missing
-			check_zram=$(/usr/bin/swapon -s|/usr/bin/grep /dev/zram0)
-			if [ $? -ne 0 ]; then
-			  /usr/bin/modprobe zram
-			  echo zstd > /sys/block/zram0/comp_algorithm
-			  echo 4G > /sys/block/zram0/disksize
-			  /usr/bin/mkswap --label zram0 /dev/zram0
-			  /usr/bin/swapon --priority 100 /dev/zram0
-			fi
+			/usr/bin/modprobe zram
+			echo zstd > /sys/block/zram0/comp_algorithm
+			echo 4G > /sys/block/zram0/disksize
+			/usr/bin/mkswap --label zram0 /dev/zram0
+			/usr/bin/swapon --priority 100 /dev/zram0
 			;;
 		*)
 			echo "invalid operation"

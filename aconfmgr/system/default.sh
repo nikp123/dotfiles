@@ -12,9 +12,10 @@ source ./system/general/users.sh
 
 source ./system/desktop/common.sh
 source ./system/desktop/fonts.sh
-source ./system/desktop/greetd.sh
+source ./system/desktop/gdm.sh
+#source ./system/desktop/greetd.sh
 #source ./system/desktop/lightdm.sh
-#source ./system/desktop/sway.sh
+source ./system/desktop/sway.sh
 source ./system/desktop/theming.sh
 source ./system/desktop/x11.sh
 
@@ -26,7 +27,9 @@ source ./system/networking/tailscale.sh
 
 source ./system/tools/disk.sh
 source ./system/tools/editors.sh
+source ./system/tools/embedded.sh
 source ./system/tools/file.sh
+source ./system/tools/gaming.sh
 source ./system/tools/system-hardware.sh
 source ./system/tools/unix.sh
 source ./system/tools/web.sh

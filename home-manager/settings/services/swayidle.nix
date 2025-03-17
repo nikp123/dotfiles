@@ -22,6 +22,12 @@
       ${pkgs.lightdm}/bin/dm-tool lock
     fi
   '';
+
+  lol = pkgs.writeScript "aaaaaaaaaaaa" ''
+    export PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+    export XDG_CURRENT_DESKTOP=sway
+    /usr/bin/swaylock-fancy
+  '';
 in {
   services.swayidle = {
     events = [
@@ -29,14 +35,14 @@ in {
         event         = "after-resume";
         command       = "${pkgs.sway}/bin/swaymsg output \\* dpms on";
       }
-      {
-        event         = "lock";
-        command       = "${dm-tool-patched}";
-      }
       #{
       #  event         = "lock";
-      #  command       = "${abongus}/bin/swaylock";
+      #  command       = "${dm-tool-patched}";
       #}
+      {
+        event         = "lock";
+        command       = "${lol}";
+      }
       {
         event         = "before-sleep";
         command       = "${pkgs.systemd}/bin/loginctl lock-session";
@@ -49,5 +55,10 @@ in {
         resumeCommand = "${pkgs.sway}/bin/swaymsg output \\* dpms enable";
       }
     ];
+  };
+
+  # Required because of scripts
+  systemd.user.services."swayidle" = {
+    Install.WantedBy = lib.mkForce [];
   };
 }

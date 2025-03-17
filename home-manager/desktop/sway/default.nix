@@ -102,4 +102,6 @@ in {
 
     swww
   ];
+
+  home.sessionVariables.XDG_CURRENT_DESKTOP = "sway";
 }

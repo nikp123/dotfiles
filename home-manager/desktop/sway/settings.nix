@@ -143,9 +143,9 @@ in {
     ];
   };
   extraConfigEarly = ''
-    exec ${pkgs.systemd}/bin/systemctl --user import-environment
-    #exec dbus-sway-environment
     exec ${pkgs.xorg.xhost}/bin/xhost +
+    # i am going to hell over this but so is nix
+    exec ${config.systemd.user.services.swayidle.Service.ExecStart}
   '';
   extraSessionCommands = ''
     [ -f "${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh" ] && . "${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh"

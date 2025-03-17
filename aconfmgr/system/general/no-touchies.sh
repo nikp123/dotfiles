@@ -1,6 +1,7 @@
 IgnorePath /etc/.updated
 IgnorePath /etc/.pwd.lock
 IgnorePath /etc/ca-certificates/extracted
+IgnorePath /etc/colord
 IgnorePath /etc/hostname
 IgnorePath /etc/ld.so.cache
 IgnorePath /etc/os-release
@@ -8,10 +9,15 @@ IgnorePath /etc/ssl/certs
 IgnorePath /usr/lib/modules
 IgnorePath /usr/lib/modules/*/vmlinuz
 IgnorePath /usr/lib/udev/hwdb.bin
+IgnorePath /usr/lib/gtk-2.0
+IgnorePath /usr/lib32/gconv
+IgnorePath /usr/lib32/gdk-pixbuf-2.0
+IgnorePath /usr/lib32/gtk-2.0
 IgnorePath /usr/share/info/dir
 IgnorePath /usr/share/man/mandoc.db
 IgnorePath /usr/share/mime
 IgnorePath /var/.updated
+IgnorePath /var/lib/geoclue
 IgnorePath /var/lib/portables
 IgnorePath /var/lib/private
 IgnorePath /var/lib/systemd/backlight
@@ -23,7 +29,11 @@ IgnorePath /var/lib/systemd/linger
 IgnorePath /var/lib/systemd/pstore
 IgnorePath /var/lib/systemd/rfkill
 IgnorePath /var/lib/systemd/timesync
+IgnorePath /var/lib/upower
 IgnorePath /var/tmp
+
+IgnorePath /usr/lib/*.so.*
+IgnorePath /usr/lib32/*.so.*
 
 # Known cache files
 IgnorePath /usr/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
