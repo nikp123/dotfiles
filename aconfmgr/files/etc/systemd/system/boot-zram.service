@@ -1,0 +1,6 @@
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/systemd/system-sleep/zram-hibernate-hook post hibernate
+
+[Install]
+RequiredBy=multi-user.target
