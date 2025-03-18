@@ -1,4 +1,5 @@
 AddPackage flatpak
+AddPackage flatpak-xdg-utils
 AddPackage xdg-desktop-portal-gnome
 AddPackage xdg-desktop-portal-wlr
 AddPackage xdg-desktop-portal-xapp

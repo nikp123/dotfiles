@@ -48,4 +48,7 @@
     text_editor  = "neovim";
     torrent      = "transmission-gtk";
   };
+ 
+  # Ya need this on non-nixos
+  targets.genericLinux.enable = true;
 }

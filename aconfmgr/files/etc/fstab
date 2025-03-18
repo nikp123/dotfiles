@@ -6,7 +6,7 @@
 UUID=3d58743e-ba1c-4655-ac1e-86a97300c54d	/         	btrfs     	rw,relatime,ssd,space_cache=v2,subvol=/@arch-x86_64	0 0
 
 # /dev/mapper/ark-root
-UUID=3d58743e-ba1c-4655-ac1e-86a97300c54d	/home     	btrfs     	rw,relatime,ssd,space_cache=v2,subvol=/@home.arch	0 0
+UUID=3d58743e-ba1c-4655-ac1e-86a97300c54d	/home     	btrfs     	rw,relatime,ssd,space_cache=v2,subvol=/@home		0 0
 
 # /dev/mapper/ark-root
 UUID=3d58743e-ba1c-4655-ac1e-86a97300c54d	/persistent   	btrfs     	rw,relatime,ssd,space_cache=v2,subvol=/@persistent	0 0
