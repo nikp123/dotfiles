@@ -3,4 +3,5 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
-XDG_DATA_DIRS=/usr/share
+XDG_DATA_DIRS=/usr/share:/var/lib/flatpak/exports/share
+EDITOR=vim

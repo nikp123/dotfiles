@@ -1,4 +1,5 @@
 source ./system/general/admin.sh
+source ./system/general/flatpak.sh
 source ./system/general/linux.sh
 source ./system/general/locale.sh
 source ./system/general/logging.sh
@@ -31,6 +32,7 @@ source ./system/tools/editors.sh
 source ./system/tools/embedded.sh
 source ./system/tools/file.sh
 source ./system/tools/gaming.sh
+source ./system/tools/secrets.sh
 source ./system/tools/system-hardware.sh
 source ./system/tools/unix.sh
 source ./system/tools/web.sh

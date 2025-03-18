@@ -28,6 +28,7 @@ IgnorePath /var/lib/systemd/home
 IgnorePath /var/lib/systemd/linger
 IgnorePath /var/lib/systemd/pstore
 IgnorePath /var/lib/systemd/rfkill
+IgnorePath /var/lib/systemd/sleep
 IgnorePath /var/lib/systemd/timesync
 IgnorePath /var/lib/upower
 IgnorePath /var/tmp

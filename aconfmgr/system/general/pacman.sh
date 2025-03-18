@@ -15,6 +15,7 @@ IgnorePath /etc/pacman.d/mirrorlist.pacnew
 
 # Pacman's configuration
 CopyFile /etc/pacman.conf
+CopyFile /etc/makepkg.conf.d/parallel.conf
 
 # Ignore pacman's state files
 IgnorePath /var/lib/pacman

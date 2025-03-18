@@ -1,2 +1,3 @@
-AddPackage ncdu
 AddPackage tree
+AddPackage ncdu
+AddPackage unrar

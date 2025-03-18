@@ -15,7 +15,7 @@
     ./system/icons/numix.nix
 
     # non-nixOS services or those that are handled badly by home-manager
-    #services/unison.nix
+    services/unison.nix
     #services/sunshine
     # ... or that are completely ignored by anyone using nixOS
     #services/gcr/prompter.nix

@@ -21,3 +21,7 @@ CreateLink /etc/fonts/conf.d/80-delicious.conf /usr/share/fontconfig/conf.defaul
 CreateLink /etc/fonts/conf.d/90-synthetic.conf /usr/share/fontconfig/conf.default/90-synthetic.conf
 
 IgnorePath /usr/share/fonts
+
+# The have to be installed manually without the use of AUR
+IgnorePackage --foreign ttf-ms-win10
+IgnorePackage --foreign ttf-ms-win10-other

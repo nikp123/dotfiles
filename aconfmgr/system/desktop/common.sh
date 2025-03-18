@@ -9,6 +9,9 @@ AddPackage light-debug
 AddPackage orc
 AddPackage seatd
 
+# Environment specific apps
+AddPackage thunar
+
 IgnorePath /etc/light
 IgnorePath /var/lib/AccountsService
 IgnorePath /var/lib/colord
