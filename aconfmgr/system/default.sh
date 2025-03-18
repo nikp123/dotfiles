@@ -28,6 +28,7 @@ source ./system/networking/systemd.sh
 source ./system/networking/tailscale.sh
 
 source ./system/tools/disk.sh
+source ./system/tools/devel.sh
 source ./system/tools/editors.sh
 source ./system/tools/embedded.sh
 source ./system/tools/file.sh

@@ -4,3 +4,5 @@
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
 EDITOR=vim
+TZ=Europe/Belgrade
+TZDIR=/usr/share/zoneinfo
