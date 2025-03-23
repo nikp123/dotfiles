@@ -47,5 +47,11 @@
     # Terminal emulator
     foot      = import ./foot.nix;
   };
+
+  home.packages = with pkgs; [
+    dino
+    kalker
+    supersonic
+  ];
 }
 

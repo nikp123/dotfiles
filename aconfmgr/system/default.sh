@@ -22,13 +22,16 @@ source ./system/desktop/theming.sh
 source ./system/desktop/x11.sh
 
 source ./system/hardware/audio.sh
+source ./system/hardware/printing.sh
 
+source ./system/networking/avahi.sh
 source ./system/networking/NetworkManager.sh
 source ./system/networking/systemd.sh
 source ./system/networking/tailscale.sh
 
-source ./system/tools/disk.sh
+source ./system/tools/creative.sh
 source ./system/tools/devel.sh
+source ./system/tools/disk.sh
 source ./system/tools/editors.sh
 source ./system/tools/embedded.sh
 source ./system/tools/file.sh

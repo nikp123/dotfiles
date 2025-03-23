@@ -43,7 +43,6 @@
   defaultapp = {
     audio_player = "audacious";
     web_browser  = "firefox";
-    office       = "onlyoffice";
     pdf_viewer   = "zathura";
     text_editor  = "neovim";
     torrent      = "transmission-gtk";

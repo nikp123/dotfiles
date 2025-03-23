@@ -58,13 +58,6 @@ in {
       description = "Sets the default notification daemon";
     };
 
-    office = mkOption {
-      type = types.enum [
-        "onlyoffice"
-      ];
-      description = "Sets default office program";
-    };
-
     password_manager = mkOption {
       type = types.enum [
         "rofi-rbw"
@@ -129,7 +122,6 @@ in {
     ./programs/menu/rofi.nix
     ./programs/notification_daemon/dunst.nix
     ./programs/notification_daemon/swaync.nix
-    ./programs/office/onlyoffice.nix
     ./programs/password_manager/rofi-rbw.nix
     ./programs/pdf_viewer/zathura.nix
     ./programs/terminal/alacritty.nix

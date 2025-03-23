@@ -36,6 +36,8 @@ IgnorePath /var/tmp
 IgnorePath /usr/lib/*.so.*
 IgnorePath /usr/lib32/*.so.*
 
+IgnorePath /usr/lib/utempter/utempter
+
 # Known cache files
 IgnorePath /usr/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
 IgnorePath /usr/lib/gio/modules/giomodule.cache
