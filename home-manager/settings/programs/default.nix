@@ -49,9 +49,15 @@
   };
 
   home.packages = with pkgs; [
+    beekeeper-studio
     dino
+    f3d
+    iperf
     kalker
+    openboardview
+    stress
     supersonic
+    virt-manager
   ];
 }
 

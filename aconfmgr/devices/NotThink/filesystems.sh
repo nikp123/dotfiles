@@ -13,7 +13,4 @@ CreateLink /etc/lvm/backup /persistent/etc/lvm/backup
 # Save important files into a persistent directory
 # but don't manage them inside of your configuration
 # as they most likely contain secrets
-CreateDir /persistent
-# This is to work around a bug that thinks that I'm always recreating this directory
-CreateLink /persistent/.i_exist_lmao /dev/null
-IgnorePath /persistent/*
+IgnorePath '/persistent/*'

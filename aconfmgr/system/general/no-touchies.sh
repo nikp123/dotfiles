@@ -7,7 +7,7 @@ IgnorePath /etc/ld.so.cache
 IgnorePath /etc/os-release
 IgnorePath /etc/ssl/certs
 IgnorePath /usr/lib/modules
-IgnorePath /usr/lib/modules/*/vmlinuz
+IgnorePath '/usr/lib/modules/*/vmlinuz'
 IgnorePath /usr/lib/udev/hwdb.bin
 IgnorePath /usr/lib/gtk-2.0
 IgnorePath /usr/lib32/gconv
@@ -33,8 +33,10 @@ IgnorePath /var/lib/systemd/timesync
 IgnorePath /var/lib/upower
 IgnorePath /var/tmp
 
-IgnorePath /usr/lib/*.so.*
-IgnorePath /usr/lib32/*.so.*
+IgnorePath '/opt/*'
+
+IgnorePath '/usr/lib/*.so.*'
+IgnorePath '/usr/lib32/*.so.*'
 
 IgnorePath /usr/lib/utempter/utempter
 

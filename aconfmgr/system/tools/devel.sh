@@ -1,9 +1,16 @@
 AddPackage android-studio
 AddPackage android-tools
+AddPackage bettercap
 AddPackage binwalk
 AddPackage gdb
 AddPackage glm
 AddPackage imhex-bin
+AddPackage jd-gui-bin
+AddPackage rustup
+AddPackage rustrover
+AddPackage sdl2_gfx
+AddPackage sdl2_net
 AddPackage sfml
 AddPackage strace
+AddPackage tcc
 AddPackage valgrind

@@ -3,6 +3,7 @@ source ./system/general/flatpak.sh
 source ./system/general/linux.sh
 source ./system/general/locale.sh
 source ./system/general/logging.sh
+source ./system/general/java.sh
 source ./system/general/nix.sh
 source ./system/general/no-touchies.sh
 source ./system/general/pacman.sh
@@ -14,7 +15,7 @@ source ./system/general/users.sh
 
 source ./system/desktop/common.sh
 source ./system/desktop/fonts.sh
-source ./system/desktop/gdm.sh
+#source ./system/desktop/gdm.sh
 #source ./system/desktop/greetd.sh
 #source ./system/desktop/lightdm.sh
 source ./system/desktop/sway.sh
@@ -22,6 +23,8 @@ source ./system/desktop/theming.sh
 source ./system/desktop/x11.sh
 
 source ./system/hardware/audio.sh
+source ./system/hardware/bluetooth.sh
+source ./system/hardware/embedded.sh
 source ./system/hardware/printing.sh
 
 source ./system/networking/avahi.sh
@@ -36,6 +39,7 @@ source ./system/tools/editors.sh
 source ./system/tools/embedded.sh
 source ./system/tools/file.sh
 source ./system/tools/gaming.sh
+source ./system/tools/networking.sh
 source ./system/tools/secrets.sh
 source ./system/tools/system-hardware.sh
 source ./system/tools/unix.sh

@@ -1,3 +1,5 @@
+CopyFile /etc/NetworkManager/conf.d/dns.conf
+
 CreateDir /var/lib/systemd/network '' systemd-network systemd-network
 
 CreateLink /etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service /usr/lib/systemd/system/systemd-networkd-wait-online.service
