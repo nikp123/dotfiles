@@ -17,7 +17,6 @@
     path = .ssh
     path = .local/share/gnupg
     path = Documents
-    path = Sandbox/Faks
     path = Sandbox/Gaming
     path = Music
     path = Pictures
@@ -39,13 +38,6 @@
     ignore = Path Sandbox/Gaming/Linux/.cache
     ignore = Path Sandbox/Gaming/Linux/.local/share/lutris/runtime
     ignore = Path Sandbox/Gaming/Linux/.local/share/lutris/runners
-
-    # Ignore known bloat directories
-    ignore = Path Sandbox/Faks/.MathWorks
-    ignore = Path Sandbox/Faks/.local/share/applications
-    ignore = Path Sandbox/ArchLinux/.cache
-    ignore = Path Sandbox/ArchLinux/.MathWorks
-    ignore = Path Sandbox/ArchLinux/.local/share/applications
 
     ignore = Path .local/share/gnupg/gpg-agent.conf
     ignore = Path .local/share/gnupg/gpg.conf

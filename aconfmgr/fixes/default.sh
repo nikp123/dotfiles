@@ -1,4 +1,6 @@
+source ./fixes/btrfs-mount-options.sh
 source ./fixes/change-mountpoint-to-media.sh
+source ./fixes/create-media-dir.sh
 source ./fixes/disable-lockout.sh
 source ./fixes/disable-pc-speaker.sh
 source ./fixes/fix-limits.sh

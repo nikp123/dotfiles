@@ -6,10 +6,13 @@ IgnorePath /etc/hostname
 IgnorePath /etc/ld.so.cache
 IgnorePath /etc/os-release
 IgnorePath /etc/ssl/certs
+IgnorePath /var/lib/alsa/asound.state
 IgnorePath /usr/lib/modules
 IgnorePath '/usr/lib/modules/*/vmlinuz'
 IgnorePath /usr/lib/udev/hwdb.bin
+IgnorePath /usr/lib/gconv/gconv-modules.cache
 IgnorePath /usr/lib/gtk-2.0
+IgnorePath /usr/lib/luarocks/rocks-5.1/manifest
 IgnorePath /usr/lib32/gconv
 IgnorePath /usr/lib32/gdk-pixbuf-2.0
 IgnorePath /usr/lib32/gtk-2.0

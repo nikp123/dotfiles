@@ -1,6 +1,8 @@
-AddPackage wireplumber
-AddPackage pipewire-pulse
+AddPackage alsa-utils
 AddPackage pavucontrol
+AddPackage pipewire-alsa
+AddPackage pipewire-pulse
+AddPackage wireplumber
 
 # Enable PipeWire and Wireplumber
 CreateLink /etc/systemd/user/pipewire-session-manager.service /usr/lib/systemd/user/wireplumber.service

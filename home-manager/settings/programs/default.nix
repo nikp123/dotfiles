@@ -50,14 +50,29 @@
 
   home.packages = with pkgs; [
     beekeeper-studio
+    cutecom
     dino
     f3d
+    fd
+    freecad
+    gimp
+    gnome-font-viewer
     iperf
     kalker
+    nixfmt-classic
     openboardview
+    openscad
+    platformio
+    prettierd
+    #prismlauncher # broken :(
+    rustdesk-flutter
+    sqlfluff
+    scantailor-advanced
     stress
     supersonic
     virt-manager
+    vscode
+    wl-color-picker
   ];
 }
 

@@ -21,6 +21,7 @@ source ./system/desktop/fonts.sh
 source ./system/desktop/sway.sh
 source ./system/desktop/theming.sh
 source ./system/desktop/x11.sh
+source ./system/desktop/xfce4.sh
 
 source ./system/hardware/audio.sh
 source ./system/hardware/bluetooth.sh

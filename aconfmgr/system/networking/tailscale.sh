@@ -8,7 +8,9 @@ IgnorePath /var/lib/tailscale/files
 IgnorePath /var/lib/tailscale/tailscaled.log.conf
 IgnorePath /var/lib/tailscale/tailscaled.log1.txt
 IgnorePath /var/lib/tailscale/tailscaled.log2.txt 
+# Yes, this should be in persistent, but tailscale keeps overwriting it,
+# so no point in fighting with tailscale
+IgnorePath /var/lib/tailscale/tailscaled.state
 
-CreateLink /var/lib/tailscale/tailscaled.state /persistent/var/lib/tailscale/tailscaled.state
 IgnorePath /etc/resolv.conf
 IgnorePath /etc/resolv.pre-tailscale-backup.conf

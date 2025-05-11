@@ -1,11 +1,7 @@
 AddPackage sbctl # Secure Boot key manager
 AddPackage sbsigntools # Tools to add signatures to EFI binaries and Drivers
 AddPackage systemd-ukify # Combine kernel and initrd into a signed Unified Kernel Image
-AddPackage --foreign pacman-hook-kernel-install # Pacman hooks for kernel-install.
 
-# Disable mkinitcpio stages as we're going to use UKIs
-CreateLink /etc/pacman.d/hooks/60-mkinitcpio-install.hook /dev/null
-CreateLink /etc/pacman.d/hooks/60-mkinitcpio-remove.hook /dev/null
 CopyFile /etc/pacman.d/hooks/80-secureboot.hook # Sign systemd-boot images
 
 # Configure all the required UKI stuff
