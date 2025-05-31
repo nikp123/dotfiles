@@ -2,6 +2,7 @@ AddPackage android-studio
 AddPackage android-tools
 AddPackage bettercap
 AddPackage binwalk
+AddPackage cmake
 AddPackage gdb
 AddPackage glm
 AddPackage go

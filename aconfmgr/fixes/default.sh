@@ -11,4 +11,5 @@ source ./fixes/load-qemu-nbd-module.sh
 source ./fixes/power-management.sh
 source ./fixes/service-stop-time.sh
 source ./fixes/suspend-then-hibernate.sh
+source ./fixes/udev-permissions.sh
 source ./fixes/wifi-powersave.sh

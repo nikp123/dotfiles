@@ -60,6 +60,8 @@
     iperf
     kalker
     nixfmt-classic
+    nixos-enter
+    nixos-install-tools
     openboardview
     openscad
     platformio

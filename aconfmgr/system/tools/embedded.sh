@@ -8,7 +8,9 @@ AddPackage kicad-library
 AddPackage kicad-library-3d
 AddPackage pmbootstrap
 AddPackage pulseview
+AddPackage scrcpy
 AddPackage screen
+AddPackage sigrok-cli
 AddPackage sigrok-firmware-fx2lafw
 AddPackage simulide
 AddPackage simulide-debug
