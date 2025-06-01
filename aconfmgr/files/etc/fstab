@@ -3,16 +3,16 @@
 
 # <file system> <dir> <type> <options> <dump> <pass>
 # /dev/mapper/ark-root
-UUID=3d58743e-ba1c-4655-ac1e-86a97300c54d	/         	btrfs     	rw,relatime,ssd,space_cache=v2,subvol=/@arch-x86_64	0 0
+UUID=3d58743e-ba1c-4655-ac1e-86a97300c54d	/         	btrfs     	rw,relatime,ssd,space_cache=v2,subvol=/@arch-x86_64,discard=async	0 0
 
 # /dev/mapper/ark-root
-UUID=3d58743e-ba1c-4655-ac1e-86a97300c54d	/home     	btrfs     	rw,relatime,ssd,space_cache=v2,subvol=/@home		0 0
+UUID=3d58743e-ba1c-4655-ac1e-86a97300c54d	/home     	btrfs     	rw,relatime,ssd,space_cache=v2,subvol=/@home,discard=async		0 0
 
 # /dev/mapper/ark-root
-UUID=3d58743e-ba1c-4655-ac1e-86a97300c54d	/persistent   	btrfs     	rw,relatime,ssd,space_cache=v2,subvol=/@persistent	0 0
+UUID=3d58743e-ba1c-4655-ac1e-86a97300c54d	/persistent   	btrfs     	rw,relatime,ssd,space_cache=v2,subvol=/@persistent,discard=async	0 0
 
 # /dev/mapper/ark-root
-UUID=3d58743e-ba1c-4655-ac1e-86a97300c54d	/media/DATA	btrfs     	rw,relatime,ssd,space_cache=v2,subvol=/@data	0 0
+UUID=3d58743e-ba1c-4655-ac1e-86a97300c54d	/media/DATA	btrfs     	rw,relatime,ssd,space_cache=v2,subvol=/@data,discard=async	0 0
 
 # UUID=B626-0BA2 LABEL=EFI_LIN
 /dev/sda2           	/boot/efi         	vfat      	rw,relatime,fmask=0377,dmask=0277,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 1

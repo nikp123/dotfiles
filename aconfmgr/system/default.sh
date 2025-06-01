@@ -15,7 +15,7 @@ source ./system/general/users.sh
 
 source ./system/desktop/common.sh
 source ./system/desktop/fonts.sh
-#source ./system/desktop/gdm.sh
+source ./system/desktop/gdm.sh
 #source ./system/desktop/greetd.sh
 #source ./system/desktop/lightdm.sh
 source ./system/desktop/sway.sh

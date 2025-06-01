@@ -49,7 +49,9 @@
   };
 
   home.packages = with pkgs; [
+    audacious
     beekeeper-studio
+    beets
     cutecom
     dino
     f3d

@@ -7,7 +7,8 @@ AddPackage kicad
 AddPackage kicad-library
 AddPackage kicad-library-3d
 AddPackage pmbootstrap
-AddPackage pulseview
+AddPackage --foreign pulseview-git
+AddPackage --foreign libsigrok-git
 AddPackage scrcpy
 AddPackage screen
 AddPackage sigrok-cli
