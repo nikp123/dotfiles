@@ -1,3 +1,4 @@
+AddPackage blueman
 AddPackage bluez
 AddPackage bluez-tools
 AddPackage bluez-utils

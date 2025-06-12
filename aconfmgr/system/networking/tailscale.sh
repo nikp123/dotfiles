@@ -2,7 +2,7 @@ AddPackage tailscale # A mesh VPN that makes it easy to connect your devices, wh
 
 CreateLink /etc/systemd/system/multi-user.target.wants/tailscaled.service /usr/lib/systemd/system/tailscaled.service
 
-CreateDir /var/lib/tailscale 700
+IgnorePath /var/lib/tailscale
 IgnorePath /var/lib/tailscale/derpmap.cached.json
 IgnorePath /var/lib/tailscale/files
 IgnorePath /var/lib/tailscale/tailscaled.log.conf

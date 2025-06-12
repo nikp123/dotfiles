@@ -50,8 +50,6 @@
 
   home.packages = with pkgs; [
     audacious
-    beekeeper-studio
-    beets
     cutecom
     dino
     f3d
@@ -68,12 +66,10 @@
     openscad
     platformio
     prettierd
-    #prismlauncher # broken :(
     rustdesk-flutter
     sqlfluff
     scantailor-advanced
     stress
-    supersonic
     virt-manager
     vscode
     wl-color-picker

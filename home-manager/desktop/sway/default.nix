@@ -37,14 +37,8 @@ in {
       enable = true;
       systemdTarget = systemd-target;
     };
-    swww = {
-      enable = true;
-      systemdTarget = systemd-target;
-    };
-    polkit-gnome = {
-      enable = true;
-      systemdTarget = systemd-target;
-    };
+    swww.enable = true;
+    polkit-gnome.enable = true;
     pasystray.enable = false;
     swaync.enable = true;
     udiskie.systemdTarget = systemd-target;

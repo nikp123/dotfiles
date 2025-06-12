@@ -20,9 +20,12 @@ IgnorePath /usr/share/info/dir
 IgnorePath /usr/share/man/mandoc.db
 IgnorePath /usr/share/mime
 IgnorePath /var/.updated
+IgnorePath /var/lib/BrlAPI
+IgnorePath /var/lib/brltty
 IgnorePath /var/lib/geoclue
 IgnorePath /var/lib/portables
 IgnorePath /var/lib/private
+IgnorePath /var/lib/rpcbind
 IgnorePath /var/lib/systemd/backlight
 IgnorePath /var/lib/systemd/catalog
 IgnorePath /var/lib/systemd/coredump

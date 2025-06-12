@@ -1,5 +1,6 @@
 AddPackage android-studio
 AddPackage android-tools
+AddPackage bear
 AddPackage bettercap
 AddPackage binwalk
 AddPackage cmake
@@ -12,7 +13,12 @@ AddPackage lldb
 AddPackage luarocks
 AddPackage --foreign mingw-w64-gcc
 AddPackage npm
+AddPackage python-matplotlib
 AddPackage python-pip
+AddPackage python-pipx
+AddPackage python-pylast
+AddPackage python-scipy
+AddPackage python-zeroconf
 AddPackage rustup
 AddPackage --foreign rustrover
 AddPackage --foreign rustrover-jre
