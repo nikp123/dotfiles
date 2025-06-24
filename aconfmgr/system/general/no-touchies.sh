@@ -22,6 +22,8 @@ IgnorePath /usr/share/mime
 IgnorePath /var/.updated
 IgnorePath /var/lib/BrlAPI
 IgnorePath /var/lib/brltty
+IgnorePath /var/lib/cni
+IgnorePath /var/lib/containers
 IgnorePath /var/lib/geoclue
 IgnorePath /var/lib/portables
 IgnorePath /var/lib/private

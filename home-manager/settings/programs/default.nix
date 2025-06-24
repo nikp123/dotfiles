@@ -59,6 +59,7 @@
     gnome-font-viewer
     iperf
     kalker
+    kid3
     nixfmt-classic
     nixos-enter
     nixos-install-tools

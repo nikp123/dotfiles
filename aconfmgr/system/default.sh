@@ -42,7 +42,9 @@ source ./system/tools/file.sh
 source ./system/tools/gaming.sh
 source ./system/tools/media.sh
 source ./system/tools/networking.sh
+source ./system/tools/remote.sh
 source ./system/tools/secrets.sh
 source ./system/tools/system-hardware.sh
 source ./system/tools/unix.sh
+source ./system/tools/virtualization.sh
 source ./system/tools/web.sh

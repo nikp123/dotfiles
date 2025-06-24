@@ -2,6 +2,7 @@ AddPackage aml-flash-tool
 AddPackage arm-none-eabi-gcc
 AddPackage avr-libc
 AddPackage avrdude
+AddPackage blisp
 AddPackage --foreign bk7231tools
 AddPackage dtc
 AddPackage esptool

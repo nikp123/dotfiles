@@ -1,3 +1,4 @@
+AddPackage aws-sdk-cpp-iam # Dependency to nix
 AddPackage nix
 
 # Paths get fucked if we don't do this

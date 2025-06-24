@@ -1,4 +1,5 @@
-AddPackage android-studio
+AddPackage --foreign android-ndk
+AddPackage --foreign android-studio
 AddPackage android-tools
 AddPackage bear
 AddPackage bettercap
@@ -11,7 +12,6 @@ AddPackage imhex-bin
 AddPackage jd-gui-bin
 AddPackage lldb
 AddPackage luarocks
-AddPackage --foreign mingw-w64-gcc
 AddPackage npm
 AddPackage python-matplotlib
 AddPackage python-pip
@@ -30,3 +30,10 @@ AddPackage tcc
 AddPackage valgrind
 AddPackage vulkan-headers
 AddPackage --foreign xplist-bin
+
+# Windows stuff
+AddPackage mingw-w64-cairo
+AddPackage mingw-w64-cmake
+AddPackage mingw-w64-fftw
+AddPackage mingw-w64-gcc
+AddPackage mingw-w64-glew

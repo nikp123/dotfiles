@@ -22,25 +22,31 @@ in {
     matchBlocks = {
       "GrazServer" = {
         identityFile = "${ssh_dir}/keys/home/id_ed25519";
-        hostname = "graz.server.tailscale";
+        hostname = "graz-server.tailscale";
         user = "nikp123";
         port = 22000;
       };
       "NSServer" = {
         identityFile = "${ssh_dir}/keys/home/id_ed25519";
-        hostname = "ns.server.tailscale";
+        hostname = "ns-server.tailscale";
+        user = "nikp123";
+        port = 22000;
+      };
+      "SlatinaServer" = {
+        identityFile = "${ssh_dir}/keys/home/id_ed25519";
+        hostname = "slatina-server.tailscale";
         user = "nikp123";
         port = 22000;
       };
       "Povernetes" = {
         identityFile = "${ssh_dir}/keys/home/id_ed25519";
-        hostname = "povernetes.server.tailscale";
+        hostname = "povernetes-server.tailscale";
         user = "nikp123";
         port = 22;
       };
       "SyncServer" = {
         identityFile = "${ssh_dir}/keys/sync/id_rsa";
-        hostname = "ns.server.tailscale";
+        hostname = "ns-server.tailscale";
         user = "nikp123";
         port = 22001;
       };

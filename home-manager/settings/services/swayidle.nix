@@ -24,7 +24,7 @@
   '';
 
   lol = pkgs.writeScript "aaaaaaaaaaaa" ''
-    export PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+    #export PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
     export XDG_CURRENT_DESKTOP=sway
     /usr/bin/swaylock-fancy
   '';
