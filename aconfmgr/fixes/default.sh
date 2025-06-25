@@ -4,6 +4,7 @@ source ./fixes/create-media-dir.sh
 source ./fixes/disable-lockout.sh
 source ./fixes/disable-pc-speaker.sh
 source ./fixes/fix-limits.sh
+source ./fixes/fix-thinkpad-throttle-issue.sh
 source ./fixes/fix-transfer-speeds.sh
 source ./fixes/fix-usb-ssd-trim.sh
 source ./fixes/laptop-mode.sh

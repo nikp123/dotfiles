@@ -1,0 +1,9 @@
+[Unit]
+Description=Fix ThinkPad's throttling on non-standard batteries
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/fix-thinkpad-throttle-issue
+
+[Install]
+WantedBy=multi-user.target
